@@ -1410,6 +1410,613 @@ function ImGui() constructor {
 		return __imgui_memory_editor_contents(buffer, offset, size);
 	}
 
+	/// @function TextEditorCreate()
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorCreate = function() {
+		return __imgui_text_editor_create();
+	}
+
+	/// @function TextEditorSetTabSize(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Real} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetTabSize = function(_id, enabled) {
+		return __imgui_text_editor_set_tab_size(_id, enabled);
+	}
+
+	/// @function TextEditorGetTabSize(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetTabSize = function(_id) {
+		return __imgui_text_editor_get_tab_size(_id);
+	}
+
+	/// @function TextEditorSetInsertSpacesOnTabs(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetInsertSpacesOnTabs = function(_id, enabled) {
+		return __imgui_text_editor_set_insert_spaces_on_tabs(_id, enabled);
+	}
+
+	/// @function TextEditorIsInsertSpacesOnTabs(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsInsertSpacesOnTabs = function(_id) {
+		return __imgui_text_editor_is_insert_spaces_on_tabs(_id);
+	}
+
+	/// @function TextEditorSetLineSpacing(_id, amount)
+	/// @argument {Real} _id
+	/// @argument {Real} amount
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetLineSpacing = function(_id, amount) {
+		return __imgui_text_editor_set_line_spacing(_id, amount);
+	}
+
+	/// @function TextEditorGetLineSpacing(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetLineSpacing = function(_id) {
+		return __imgui_text_editor_get_line_spacing(_id);
+	}
+
+	/// @function TextEditorSetReadOnlyEnabled(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetReadOnlyEnabled = function(_id, enabled) {
+		return __imgui_text_editor_set_read_only_enabled(_id, enabled);
+	}
+
+	/// @function TextEditorIsReadOnlyEnabled(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsReadOnlyEnabled = function(_id) {
+		return __imgui_text_editor_is_read_only_enabled(_id);
+	}
+
+	/// @function TextEditorSetAutoIndentEnabled(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetAutoIndentEnabled = function(_id, enabled) {
+		return __imgui_text_editor_set_auto_indent_enabled(_id, enabled);
+	}
+
+	/// @function TextEditorIsAutoIndentEnabled(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsAutoIndentEnabled = function(_id) {
+		return __imgui_text_editor_is_auto_indent_enabled(_id);
+	}
+
+	/// @function TextEditorSetShowWhitespacesEnabled(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetShowWhitespacesEnabled = function(_id, enabled) {
+		return __imgui_text_editor_set_show_whitespaces_enabled(_id, enabled);
+	}
+
+	/// @function TextEditorIsShowWhitespacesEnabled(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsShowWhitespacesEnabled = function(_id) {
+		return __imgui_text_editor_is_show_whitespaces_enabled(_id);
+	}
+
+	/// @function TextEditorSetShowSpacesEnabled(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetShowSpacesEnabled = function(_id, enabled) {
+		return __imgui_text_editor_set_show_spaces_enabled(_id, enabled);
+	}
+
+	/// @function TextEditorIsShowSpacesEnabled(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsShowSpacesEnabled = function(_id) {
+		return __imgui_text_editor_is_show_spaces_enabled(_id);
+	}
+
+	/// @function TextEditorSetShowTabsEnabled(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetShowTabsEnabled = function(_id, enabled) {
+		return __imgui_text_editor_set_show_tabs_enabled(_id, enabled);
+	}
+
+	/// @function TextEditorIsShowTabsEnabled(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsShowTabsEnabled = function(_id) {
+		return __imgui_text_editor_is_show_tabs_enabled(_id);
+	}
+
+	/// @function TextEditorSetShowLineNumbersEnabled(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetShowLineNumbersEnabled = function(_id, enabled) {
+		return __imgui_text_editor_set_show_line_numbers_enabled(_id, enabled);
+	}
+
+	/// @function TextEditorIsShowLineNumbersEnabled(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsShowLineNumbersEnabled = function(_id) {
+		return __imgui_text_editor_is_show_line_numbers_enabled(_id);
+	}
+
+	/// @function TextEditorSetShowScrollbarMiniMapEnabled(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetShowScrollbarMiniMapEnabled = function(_id, enabled) {
+		return __imgui_text_editor_set_show_scrollbar_mini_map_enabled(_id, enabled);
+	}
+
+	/// @function TextEditorIsShowScrollbarMiniMapEnabled(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsShowScrollbarMiniMapEnabled = function(_id) {
+		return __imgui_text_editor_is_show_scrollbar_mini_map_enabled(_id);
+	}
+
+	/// @function TextEditorSetShowPanScrollIndicatorEnabled(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetShowPanScrollIndicatorEnabled = function(_id, enabled) {
+		return __imgui_text_editor_set_show_pan_scroll_indicator_enabled(_id, enabled);
+	}
+
+	/// @function TextEditorIsShowPanScrollIndicatorEnabled(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsShowPanScrollIndicatorEnabled = function(_id) {
+		return __imgui_text_editor_is_show_pan_scroll_indicator_enabled(_id);
+	}
+
+	/// @function TextEditorSetShowMatchingBrackets(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetShowMatchingBrackets = function(_id, enabled) {
+		return __imgui_text_editor_set_show_matching_brackets(_id, enabled);
+	}
+
+	/// @function TextEditorIsShowingMatchingBrackets(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsShowingMatchingBrackets = function(_id) {
+		return __imgui_text_editor_is_showing_matching_brackets(_id);
+	}
+
+	/// @function TextEditorSetCompletePairedGlyphs(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetCompletePairedGlyphs = function(_id, enabled) {
+		return __imgui_text_editor_set_complete_paired_glyphs(_id, enabled);
+	}
+
+	/// @function TextEditorIsCompletingPairedGlyphs(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsCompletingPairedGlyphs = function(_id) {
+		return __imgui_text_editor_is_completing_paired_glyphs(_id);
+	}
+
+	/// @function TextEditorSetOverwriteEnabled(_id, enabled)
+	/// @argument {Real} _id
+	/// @argument {Bool} enabled
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetOverwriteEnabled = function(_id, enabled) {
+		return __imgui_text_editor_set_overwrite_enabled(_id, enabled);
+	}
+
+	/// @function TextEditorIsOverwriteEnabled(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsOverwriteEnabled = function(_id) {
+		return __imgui_text_editor_is_overwrite_enabled(_id);
+	}
+
+	/// @function TextEditorSetMiddleMousePanMode(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetMiddleMousePanMode = function(_id) {
+		return __imgui_text_editor_set_middle_mouse_pan_mode(_id);
+	}
+
+	/// @function TextEditorSetMiddleMouseScrollMode(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetMiddleMouseScrollMode = function(_id) {
+		return __imgui_text_editor_set_middle_mouse_scroll_mode(_id);
+	}
+
+	/// @function TextEditorIsMiddleMousePanMode(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsMiddleMousePanMode = function(_id) {
+		return __imgui_text_editor_is_middle_mouse_pan_mode(_id);
+	}
+
+	/// @function TextEditorSetText(_id, text)
+	/// @argument {Real} _id
+	/// @argument {String} text
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetText = function(_id, text) {
+		return __imgui_text_editor_set_text(_id, text);
+	}
+
+	/// @function TextEditorGetText(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {String}
+	static TextEditorGetText = function(_id) {
+		return __imgui_text_editor_get_text(_id);
+	}
+
+	/// @function TextEditorGetCursorText(_id, cursor)
+	/// @argument {Real} _id
+	/// @argument {Real} cursor
+	/// @context ImGui
+	/// @return {String}
+	static TextEditorGetCursorText = function(_id, cursor) {
+		return __imgui_text_editor_get_cursor_text(_id, cursor);
+	}
+
+	/// @function TextEditorGetLineText(_id, line)
+	/// @argument {Real} _id
+	/// @argument {Real} line
+	/// @context ImGui
+	/// @return {String}
+	static TextEditorGetLineText = function(_id, line) {
+		return __imgui_text_editor_get_line_text(_id, line);
+	}
+
+	/// @function TextEditorGetSectionText(_id, start_line, start_column, end_line, end_column)
+	/// @argument {Real} _id
+	/// @argument {Real} start_line
+	/// @argument {Real} start_column
+	/// @argument {Real} end_line
+	/// @argument {Real} end_column
+	/// @context ImGui
+	/// @return {String}
+	static TextEditorGetSectionText = function(_id, start_line, start_column, end_line, end_column) {
+		return __imgui_text_editor_get_section_text(_id, start_line, start_column, end_line, end_column);
+	}
+
+	/// @function TextEditorReplaceSectionText(_id, start_line, start_column, end_line, end_column, text)
+	/// @argument {Real} _id
+	/// @argument {Real} start_line
+	/// @argument {Real} start_column
+	/// @argument {Real} end_line
+	/// @argument {Real} end_column
+	/// @argument {String} text
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorReplaceSectionText = function(_id, start_line, start_column, end_line, end_column, text) {
+		return __imgui_text_editor_replace_section_text(_id, start_line, start_column, end_line, end_column, text);
+	}
+
+	/// @function TextEditorClearText(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorClearText = function(_id) {
+		return __imgui_text_editor_clear_text(_id);
+	}
+
+	/// @function TextEditorIsEmpty(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorIsEmpty = function(_id) {
+		return __imgui_text_editor_is_empty(_id);
+	}
+
+	/// @function TextEditorGetLineCount(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetLineCount = function(_id) {
+		return __imgui_text_editor_get_line_count(_id);
+	}
+
+	/// @function TextEditorRender(_id, title, width, height, border)
+	/// @argument {Real} _id
+	/// @argument {String} title
+	/// @argument {Real} [width=0]
+	/// @argument {Real} [height=0]
+	/// @argument {Bool} [border=false]
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorRender = function(_id, title, width=0, height=0, border=false) {
+		return __imgui_text_editor_render(_id, title, width, height, border);
+	}
+
+	/// @function TextEditorSetFocus(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetFocus = function(_id) {
+		return __imgui_text_editor_set_focus(_id);
+	}
+
+	/// @function TextEditorCut(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorCut = function(_id) {
+		return __imgui_text_editor_cut(_id);
+	}
+
+	/// @function TextEditorCopy(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorCopy = function(_id) {
+		return __imgui_text_editor_copy(_id);
+	}
+
+	/// @function TextEditorPaste(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorPaste = function(_id) {
+		return __imgui_text_editor_paste(_id);
+	}
+
+	/// @function TextEditorUndo(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorUndo = function(_id) {
+		return __imgui_text_editor_undo(_id);
+	}
+
+	/// @function TextEditorRedo(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorRedo = function(_id) {
+		return __imgui_text_editor_redo(_id);
+	}
+
+	/// @function TextEditorCanUndo(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorCanUndo = function(_id) {
+		return __imgui_text_editor_can_undo(_id);
+	}
+
+	/// @function TextEditorCanRedo(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorCanRedo = function(_id) {
+		return __imgui_text_editor_can_redo(_id);
+	}
+
+	/// @function TextEditorGetUndoIndex(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetUndoIndex = function(_id) {
+		return __imgui_text_editor_get_undo_index(_id);
+	}
+
+	/// @function TextEditorSetCursor(_id, line, column)
+	/// @argument {Real} _id
+	/// @argument {Real} line
+	/// @argument {Real} column
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSetCursor = function(_id, line, column) {
+		return __imgui_text_editor_set_cursor(_id, line, column);
+	}
+
+	/// @function TextEditorSelectAll(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSelectAll = function(_id) {
+		return __imgui_text_editor_select_all(_id);
+	}
+
+	/// @function TextEditorSelectLine(_id, line)
+	/// @argument {Real} _id
+	/// @argument {Real} line
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSelectLine = function(_id, line) {
+		return __imgui_text_editor_select_line(_id, line);
+	}
+
+	/// @function TextEditorSelectLines(_id, start, _end)
+	/// @argument {Real} _id
+	/// @argument {Real} start
+	/// @argument {Real} _end
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSelectLines = function(_id, start, _end) {
+		return __imgui_text_editor_select_lines(_id, start, _end);
+	}
+
+	/// @function TextEditorSelectRegion(_id, start_line, start_column, end_line, end_column)
+	/// @argument {Real} _id
+	/// @argument {Real} start_line
+	/// @argument {Real} start_column
+	/// @argument {Real} end_line
+	/// @argument {Real} end_column
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSelectRegion = function(_id, start_line, start_column, end_line, end_column) {
+		return __imgui_text_editor_select_region(_id, start_line, start_column, end_line, end_column);
+	}
+
+	/// @function TextEditorSelectToBrackets(_id, include_brackets)
+	/// @argument {Real} _id
+	/// @argument {Bool} [include_brackets=true]
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSelectToBrackets = function(_id, include_brackets=true) {
+		return __imgui_text_editor_select_to_brackets(_id, include_brackets);
+	}
+
+	/// @function TextEditorGrowSelectionsToCurlyBrackets(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorGrowSelectionsToCurlyBrackets = function(_id) {
+		return __imgui_text_editor_grow_selections_to_curly_brackets(_id);
+	}
+
+	/// @function TextEditorShrinkSelectionsToCurlyBrackets(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorShrinkSelectionsToCurlyBrackets = function(_id) {
+		return __imgui_text_editor_shrink_selections_to_curly_brackets(_id);
+	}
+
+	/// @function TextEditorAddNextOccurrence(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorAddNextOccurrence = function(_id) {
+		return __imgui_text_editor_add_next_occurrence(_id);
+	}
+
+	/// @function TextEditorSelectAllOccurrences(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorSelectAllOccurrences = function(_id) {
+		return __imgui_text_editor_select_all_occurrences(_id);
+	}
+
+	/// @function TextEditorAnyCursorHasSelection(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorAnyCursorHasSelection = function(_id) {
+		return __imgui_text_editor_any_cursor_has_selection(_id);
+	}
+
+	/// @function TextEditorAllCursorsHaveSelection(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorAllCursorsHaveSelection = function(_id) {
+		return __imgui_text_editor_all_cursors_have_selection(_id);
+	}
+
+	/// @function TextEditorCurrentCursorHasSelection(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorCurrentCursorHasSelection = function(_id) {
+		return __imgui_text_editor_current_cursor_has_selection(_id);
+	}
+
+	/// @function TextEditorClearCursors(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Bool}
+	static TextEditorClearCursors = function(_id) {
+		return __imgui_text_editor_clear_cursors(_id);
+	}
+
+	/// @function TextEditorGetFirstVisibleLine(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetFirstVisibleLine = function(_id) {
+		return __imgui_text_editor_get_first_visible_line(_id);
+	}
+
+	/// @function TextEditorGetLastVisibleLine(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetLastVisibleLine = function(_id) {
+		return __imgui_text_editor_get_last_visible_line(_id);
+	}
+
+	/// @function TextEditorGetFirstVisibleColumn(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetFirstVisibleColumn = function(_id) {
+		return __imgui_text_editor_get_first_visible_column(_id);
+	}
+
+	/// @function TextEditorGetLastVisibleColumn(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetLastVisibleColumn = function(_id) {
+		return __imgui_text_editor_get_last_visible_column(_id);
+	}
+
+	/// @function TextEditorGetLineHeight(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetLineHeight = function(_id) {
+		return __imgui_text_editor_get_line_height(_id);
+	}
+
+	/// @function TextEditorGetGlyphWidth(_id)
+	/// @argument {Real} _id
+	/// @context ImGui
+	/// @return {Real}
+	static TextEditorGetGlyphWidth = function(_id) {
+		return __imgui_text_editor_get_glyph_width(_id);
+	}
+
 	/// @function GetFont()
 	/// @context ImGui
 	/// @return {Pointer}

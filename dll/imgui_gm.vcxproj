@@ -61,6 +61,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -82,6 +83,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -97,6 +99,7 @@
     <ClInclude Include="Extension_Interface.h" />
     <ClInclude Include="imgui_stdlib.h" />
     <ClInclude Include="Ref.h" />
+    <ClInclude Include="TextEditor.h" />
     <ClInclude Include="YYRValue.h" />
     <ClInclude Include="YYStd.h" />
     <ClInclude Include="imconfig.h" />
@@ -138,6 +141,7 @@
     <ClCompile Include="imgui_table_gm.cpp" />
     <ClCompile Include="imgui_tables.cpp" />
     <ClCompile Include="imgui_tabs_gm.cpp" />
+    <ClCompile Include="imgui_ext_text_editor_gm.cpp" />
     <ClCompile Include="imgui_text_gm.cpp" />
     <ClCompile Include="imgui_tooltips_gm.cpp" />
     <ClCompile Include="imgui_tree_gm.cpp" />
@@ -145,6 +149,7 @@
     <ClCompile Include="imgui_widgets_gm.cpp" />
     <ClCompile Include="imgui_window_gm.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="TextEditor.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -250,6 +250,18 @@ class Program {
                                                 
                                                 wrapper.argument(left.Literal, ind.Literal, right.Literal);
                                                 children.advance();
+                                            } else if (right.Literal.startsWith("GET_INDEX")) {
+                                                const inner = right.Children.filter(e => e.Type !== Token.name(","));
+                                                if (inner.length < 2) throw `Could not parse "${file.Name}", expected at least 2 arguments for call to ${right.Literal} at line ${right.Line}`;
+                                                
+                                                const ident = inner[0];
+                                                if (ident.Type !== "Identifier") throw `Could not parse "${file.Name}", expected identifier but got ${ident.Literal} as first argument for call to ${right.Literal} at line ${right.Line}`;
+                                                
+                                                const ind = inner[1];
+                                                if (ind.Type !== "Number") throw `Could not parse "${file.Name}", expected Number but got ${ind.Type} as second argument for call to ${right.Literal} at line ${right.Line}`;
+                                                
+                                                wrapper.argument(left.Literal, ind.Literal, right.Literal);
+                                                children.advance();
                                             }
                                             break;
                                         }

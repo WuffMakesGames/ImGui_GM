@@ -12,7 +12,8 @@
     "Include": [
         "scripts/**/*.*",
         "extensions/**/*.*",
-        "objects/**/*.*"
+        "objects/**/*.*",
+        "shaders/**/*.*"
     ],
     "Replace": {
         "${VersionBase}": "${Version}"

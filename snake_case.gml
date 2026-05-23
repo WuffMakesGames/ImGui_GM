@@ -1,7 +1,7 @@
 /**
 *  This script includes snake_case function defintions for ImGui_GM, as an alternative to the namespaced convention
 *  To use, just drop this script into your project with ImGui_GM
-*  Generated at 5/19/2026, 2:21:21 AM
+*  Generated at 5/23/2026, 4:12:44 PM
 */
 
 /// @function imgui_initialize
@@ -1283,6 +1283,542 @@ function imgui_memory_editor_window(title, buffer, offset=0, size=buffer_get_siz
 /// @return {Undefined}
 function imgui_memory_editor_contents(buffer, offset=0, size=buffer_get_size(buffer)) {
 	return __imgui_memory_editor_contents(buffer, offset, size);
+}
+
+/// @function imgui_text_editor_create()
+/// @return {Real}
+function imgui_text_editor_create() {
+	return __imgui_text_editor_create();
+}
+
+/// @function imgui_text_editor_set_tab_size(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Real} enabled
+/// @return {Bool}
+function imgui_text_editor_set_tab_size(_id, enabled) {
+	return __imgui_text_editor_set_tab_size(_id, enabled);
+}
+
+/// @function imgui_text_editor_get_tab_size(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_tab_size(_id) {
+	return __imgui_text_editor_get_tab_size(_id);
+}
+
+/// @function imgui_text_editor_set_insert_spaces_on_tabs(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_insert_spaces_on_tabs(_id, enabled) {
+	return __imgui_text_editor_set_insert_spaces_on_tabs(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_insert_spaces_on_tabs(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_insert_spaces_on_tabs(_id) {
+	return __imgui_text_editor_is_insert_spaces_on_tabs(_id);
+}
+
+/// @function imgui_text_editor_set_line_spacing(_id, amount)
+/// @argument {Real} _id
+/// @argument {Real} amount
+/// @return {Bool}
+function imgui_text_editor_set_line_spacing(_id, amount) {
+	return __imgui_text_editor_set_line_spacing(_id, amount);
+}
+
+/// @function imgui_text_editor_get_line_spacing(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_line_spacing(_id) {
+	return __imgui_text_editor_get_line_spacing(_id);
+}
+
+/// @function imgui_text_editor_set_read_only_enabled(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_read_only_enabled(_id, enabled) {
+	return __imgui_text_editor_set_read_only_enabled(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_read_only_enabled(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_read_only_enabled(_id) {
+	return __imgui_text_editor_is_read_only_enabled(_id);
+}
+
+/// @function imgui_text_editor_set_auto_indent_enabled(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_auto_indent_enabled(_id, enabled) {
+	return __imgui_text_editor_set_auto_indent_enabled(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_auto_indent_enabled(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_auto_indent_enabled(_id) {
+	return __imgui_text_editor_is_auto_indent_enabled(_id);
+}
+
+/// @function imgui_text_editor_set_show_whitespaces_enabled(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_show_whitespaces_enabled(_id, enabled) {
+	return __imgui_text_editor_set_show_whitespaces_enabled(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_show_whitespaces_enabled(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_show_whitespaces_enabled(_id) {
+	return __imgui_text_editor_is_show_whitespaces_enabled(_id);
+}
+
+/// @function imgui_text_editor_set_show_spaces_enabled(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_show_spaces_enabled(_id, enabled) {
+	return __imgui_text_editor_set_show_spaces_enabled(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_show_spaces_enabled(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_show_spaces_enabled(_id) {
+	return __imgui_text_editor_is_show_spaces_enabled(_id);
+}
+
+/// @function imgui_text_editor_set_show_tabs_enabled(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_show_tabs_enabled(_id, enabled) {
+	return __imgui_text_editor_set_show_tabs_enabled(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_show_tabs_enabled(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_show_tabs_enabled(_id) {
+	return __imgui_text_editor_is_show_tabs_enabled(_id);
+}
+
+/// @function imgui_text_editor_set_show_line_numbers_enabled(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_show_line_numbers_enabled(_id, enabled) {
+	return __imgui_text_editor_set_show_line_numbers_enabled(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_show_line_numbers_enabled(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_show_line_numbers_enabled(_id) {
+	return __imgui_text_editor_is_show_line_numbers_enabled(_id);
+}
+
+/// @function imgui_text_editor_set_show_scrollbar_mini_map_enabled(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_show_scrollbar_mini_map_enabled(_id, enabled) {
+	return __imgui_text_editor_set_show_scrollbar_mini_map_enabled(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_show_scrollbar_mini_map_enabled(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_show_scrollbar_mini_map_enabled(_id) {
+	return __imgui_text_editor_is_show_scrollbar_mini_map_enabled(_id);
+}
+
+/// @function imgui_text_editor_set_show_pan_scroll_indicator_enabled(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_show_pan_scroll_indicator_enabled(_id, enabled) {
+	return __imgui_text_editor_set_show_pan_scroll_indicator_enabled(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_show_pan_scroll_indicator_enabled(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_show_pan_scroll_indicator_enabled(_id) {
+	return __imgui_text_editor_is_show_pan_scroll_indicator_enabled(_id);
+}
+
+/// @function imgui_text_editor_set_show_matching_brackets(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_show_matching_brackets(_id, enabled) {
+	return __imgui_text_editor_set_show_matching_brackets(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_showing_matching_brackets(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_showing_matching_brackets(_id) {
+	return __imgui_text_editor_is_showing_matching_brackets(_id);
+}
+
+/// @function imgui_text_editor_set_complete_paired_glyphs(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_complete_paired_glyphs(_id, enabled) {
+	return __imgui_text_editor_set_complete_paired_glyphs(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_completing_paired_glyphs(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_completing_paired_glyphs(_id) {
+	return __imgui_text_editor_is_completing_paired_glyphs(_id);
+}
+
+/// @function imgui_text_editor_set_overwrite_enabled(_id, enabled)
+/// @argument {Real} _id
+/// @argument {Bool} enabled
+/// @return {Bool}
+function imgui_text_editor_set_overwrite_enabled(_id, enabled) {
+	return __imgui_text_editor_set_overwrite_enabled(_id, enabled);
+}
+
+/// @function imgui_text_editor_is_overwrite_enabled(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_overwrite_enabled(_id) {
+	return __imgui_text_editor_is_overwrite_enabled(_id);
+}
+
+/// @function imgui_text_editor_set_middle_mouse_pan_mode(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_set_middle_mouse_pan_mode(_id) {
+	return __imgui_text_editor_set_middle_mouse_pan_mode(_id);
+}
+
+/// @function imgui_text_editor_set_middle_mouse_scroll_mode(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_set_middle_mouse_scroll_mode(_id) {
+	return __imgui_text_editor_set_middle_mouse_scroll_mode(_id);
+}
+
+/// @function imgui_text_editor_is_middle_mouse_pan_mode(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_middle_mouse_pan_mode(_id) {
+	return __imgui_text_editor_is_middle_mouse_pan_mode(_id);
+}
+
+/// @function imgui_text_editor_set_text(_id, text)
+/// @argument {Real} _id
+/// @argument {String} text
+/// @return {Bool}
+function imgui_text_editor_set_text(_id, text) {
+	return __imgui_text_editor_set_text(_id, text);
+}
+
+/// @function imgui_text_editor_get_text(_id)
+/// @argument {Real} _id
+/// @return {String}
+function imgui_text_editor_get_text(_id) {
+	return __imgui_text_editor_get_text(_id);
+}
+
+/// @function imgui_text_editor_get_cursor_text(_id, cursor)
+/// @argument {Real} _id
+/// @argument {Real} cursor
+/// @return {String}
+function imgui_text_editor_get_cursor_text(_id, cursor) {
+	return __imgui_text_editor_get_cursor_text(_id, cursor);
+}
+
+/// @function imgui_text_editor_get_line_text(_id, line)
+/// @argument {Real} _id
+/// @argument {Real} line
+/// @return {String}
+function imgui_text_editor_get_line_text(_id, line) {
+	return __imgui_text_editor_get_line_text(_id, line);
+}
+
+/// @function imgui_text_editor_get_section_text(_id, start_line, start_column, end_line, end_column)
+/// @argument {Real} _id
+/// @argument {Real} start_line
+/// @argument {Real} start_column
+/// @argument {Real} end_line
+/// @argument {Real} end_column
+/// @return {String}
+function imgui_text_editor_get_section_text(_id, start_line, start_column, end_line, end_column) {
+	return __imgui_text_editor_get_section_text(_id, start_line, start_column, end_line, end_column);
+}
+
+/// @function imgui_text_editor_replace_section_text(_id, start_line, start_column, end_line, end_column, text)
+/// @argument {Real} _id
+/// @argument {Real} start_line
+/// @argument {Real} start_column
+/// @argument {Real} end_line
+/// @argument {Real} end_column
+/// @argument {String} text
+/// @return {Bool}
+function imgui_text_editor_replace_section_text(_id, start_line, start_column, end_line, end_column, text) {
+	return __imgui_text_editor_replace_section_text(_id, start_line, start_column, end_line, end_column, text);
+}
+
+/// @function imgui_text_editor_clear_text(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_clear_text(_id) {
+	return __imgui_text_editor_clear_text(_id);
+}
+
+/// @function imgui_text_editor_is_empty(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_is_empty(_id) {
+	return __imgui_text_editor_is_empty(_id);
+}
+
+/// @function imgui_text_editor_get_line_count(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_line_count(_id) {
+	return __imgui_text_editor_get_line_count(_id);
+}
+
+/// @function imgui_text_editor_render(_id, title, width, height, border)
+/// @argument {Real} _id
+/// @argument {String} title
+/// @argument {Real} [width=0]
+/// @argument {Real} [height=0]
+/// @argument {Bool} [border=false]
+/// @return {Bool}
+function imgui_text_editor_render(_id, title, width=0, height=0, border=false) {
+	return __imgui_text_editor_render(_id, title, width, height, border);
+}
+
+/// @function imgui_text_editor_set_focus(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_set_focus(_id) {
+	return __imgui_text_editor_set_focus(_id);
+}
+
+/// @function imgui_text_editor_cut(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_cut(_id) {
+	return __imgui_text_editor_cut(_id);
+}
+
+/// @function imgui_text_editor_copy(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_copy(_id) {
+	return __imgui_text_editor_copy(_id);
+}
+
+/// @function imgui_text_editor_paste(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_paste(_id) {
+	return __imgui_text_editor_paste(_id);
+}
+
+/// @function imgui_text_editor_undo(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_undo(_id) {
+	return __imgui_text_editor_undo(_id);
+}
+
+/// @function imgui_text_editor_redo(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_redo(_id) {
+	return __imgui_text_editor_redo(_id);
+}
+
+/// @function imgui_text_editor_can_undo(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_can_undo(_id) {
+	return __imgui_text_editor_can_undo(_id);
+}
+
+/// @function imgui_text_editor_can_redo(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_can_redo(_id) {
+	return __imgui_text_editor_can_redo(_id);
+}
+
+/// @function imgui_text_editor_get_undo_index(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_undo_index(_id) {
+	return __imgui_text_editor_get_undo_index(_id);
+}
+
+/// @function imgui_text_editor_set_cursor(_id, line, column)
+/// @argument {Real} _id
+/// @argument {Real} line
+/// @argument {Real} column
+/// @return {Bool}
+function imgui_text_editor_set_cursor(_id, line, column) {
+	return __imgui_text_editor_set_cursor(_id, line, column);
+}
+
+/// @function imgui_text_editor_select_all(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_select_all(_id) {
+	return __imgui_text_editor_select_all(_id);
+}
+
+/// @function imgui_text_editor_select_line(_id, line)
+/// @argument {Real} _id
+/// @argument {Real} line
+/// @return {Bool}
+function imgui_text_editor_select_line(_id, line) {
+	return __imgui_text_editor_select_line(_id, line);
+}
+
+/// @function imgui_text_editor_select_lines(_id, start, _end)
+/// @argument {Real} _id
+/// @argument {Real} start
+/// @argument {Real} _end
+/// @return {Bool}
+function imgui_text_editor_select_lines(_id, start, _end) {
+	return __imgui_text_editor_select_lines(_id, start, _end);
+}
+
+/// @function imgui_text_editor_select_region(_id, start_line, start_column, end_line, end_column)
+/// @argument {Real} _id
+/// @argument {Real} start_line
+/// @argument {Real} start_column
+/// @argument {Real} end_line
+/// @argument {Real} end_column
+/// @return {Bool}
+function imgui_text_editor_select_region(_id, start_line, start_column, end_line, end_column) {
+	return __imgui_text_editor_select_region(_id, start_line, start_column, end_line, end_column);
+}
+
+/// @function imgui_text_editor_select_to_brackets(_id, include_brackets)
+/// @argument {Real} _id
+/// @argument {Bool} [include_brackets=true]
+/// @return {Bool}
+function imgui_text_editor_select_to_brackets(_id, include_brackets=true) {
+	return __imgui_text_editor_select_to_brackets(_id, include_brackets);
+}
+
+/// @function imgui_text_editor_grow_selections_to_curly_brackets(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_grow_selections_to_curly_brackets(_id) {
+	return __imgui_text_editor_grow_selections_to_curly_brackets(_id);
+}
+
+/// @function imgui_text_editor_shrink_selections_to_curly_brackets(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_shrink_selections_to_curly_brackets(_id) {
+	return __imgui_text_editor_shrink_selections_to_curly_brackets(_id);
+}
+
+/// @function imgui_text_editor_add_next_occurrence(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_add_next_occurrence(_id) {
+	return __imgui_text_editor_add_next_occurrence(_id);
+}
+
+/// @function imgui_text_editor_select_all_occurrences(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_select_all_occurrences(_id) {
+	return __imgui_text_editor_select_all_occurrences(_id);
+}
+
+/// @function imgui_text_editor_any_cursor_has_selection(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_any_cursor_has_selection(_id) {
+	return __imgui_text_editor_any_cursor_has_selection(_id);
+}
+
+/// @function imgui_text_editor_all_cursors_have_selection(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_all_cursors_have_selection(_id) {
+	return __imgui_text_editor_all_cursors_have_selection(_id);
+}
+
+/// @function imgui_text_editor_current_cursor_has_selection(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_current_cursor_has_selection(_id) {
+	return __imgui_text_editor_current_cursor_has_selection(_id);
+}
+
+/// @function imgui_text_editor_clear_cursors(_id)
+/// @argument {Real} _id
+/// @return {Bool}
+function imgui_text_editor_clear_cursors(_id) {
+	return __imgui_text_editor_clear_cursors(_id);
+}
+
+/// @function imgui_text_editor_get_first_visible_line(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_first_visible_line(_id) {
+	return __imgui_text_editor_get_first_visible_line(_id);
+}
+
+/// @function imgui_text_editor_get_last_visible_line(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_last_visible_line(_id) {
+	return __imgui_text_editor_get_last_visible_line(_id);
+}
+
+/// @function imgui_text_editor_get_first_visible_column(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_first_visible_column(_id) {
+	return __imgui_text_editor_get_first_visible_column(_id);
+}
+
+/// @function imgui_text_editor_get_last_visible_column(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_last_visible_column(_id) {
+	return __imgui_text_editor_get_last_visible_column(_id);
+}
+
+/// @function imgui_text_editor_get_line_height(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_line_height(_id) {
+	return __imgui_text_editor_get_line_height(_id);
+}
+
+/// @function imgui_text_editor_get_glyph_width(_id)
+/// @argument {Real} _id
+/// @return {Real}
+function imgui_text_editor_get_glyph_width(_id) {
+	return __imgui_text_editor_get_glyph_width(_id);
 }
 
 /// @function imgui_get_font()

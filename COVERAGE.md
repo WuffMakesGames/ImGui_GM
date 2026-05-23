@@ -487,6 +487,77 @@ Below is a table of non-standard functions made specifically for ImGui_GM
 | ImGui.DrawListFlagToggle(list, flag) | [imgui_drawlist_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_drawlist_gm.cpp#L577) |
 | ImGui.MemoryEditorShowWindow(title, buffer, offset, size) | [imgui_ext_memeditor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_memeditor_gm.cpp#L5) |
 | ImGui.MemoryEditorDrawContents(buffer, offset, size) | [imgui_ext_memeditor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_memeditor_gm.cpp#L18) |
+| ImGui.TextEditorCreate() | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L12) |
+| ImGui.TextEditorSetTabSize(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L22) |
+| ImGui.TextEditorGetTabSize(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L33) |
+| ImGui.TextEditorSetInsertSpacesOnTabs(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L42) |
+| ImGui.TextEditorIsInsertSpacesOnTabs(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L53) |
+| ImGui.TextEditorSetLineSpacing(_id, amount) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L62) |
+| ImGui.TextEditorGetLineSpacing(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L73) |
+| ImGui.TextEditorSetReadOnlyEnabled(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L82) |
+| ImGui.TextEditorIsReadOnlyEnabled(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L93) |
+| ImGui.TextEditorSetAutoIndentEnabled(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L102) |
+| ImGui.TextEditorIsAutoIndentEnabled(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L113) |
+| ImGui.TextEditorSetShowWhitespacesEnabled(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L122) |
+| ImGui.TextEditorIsShowWhitespacesEnabled(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L133) |
+| ImGui.TextEditorSetShowSpacesEnabled(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L142) |
+| ImGui.TextEditorIsShowSpacesEnabled(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L153) |
+| ImGui.TextEditorSetShowTabsEnabled(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L162) |
+| ImGui.TextEditorIsShowTabsEnabled(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L173) |
+| ImGui.TextEditorSetShowLineNumbersEnabled(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L182) |
+| ImGui.TextEditorIsShowLineNumbersEnabled(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L193) |
+| ImGui.TextEditorSetShowScrollbarMiniMapEnabled(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L202) |
+| ImGui.TextEditorIsShowScrollbarMiniMapEnabled(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L213) |
+| ImGui.TextEditorSetShowPanScrollIndicatorEnabled(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L222) |
+| ImGui.TextEditorIsShowPanScrollIndicatorEnabled(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L233) |
+| ImGui.TextEditorSetShowMatchingBrackets(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L242) |
+| ImGui.TextEditorIsShowingMatchingBrackets(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L253) |
+| ImGui.TextEditorSetCompletePairedGlyphs(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L262) |
+| ImGui.TextEditorIsCompletingPairedGlyphs(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L273) |
+| ImGui.TextEditorSetOverwriteEnabled(_id, enabled) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L282) |
+| ImGui.TextEditorIsOverwriteEnabled(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L293) |
+| ImGui.TextEditorSetMiddleMousePanMode(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L302) |
+| ImGui.TextEditorSetMiddleMouseScrollMode(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L312) |
+| ImGui.TextEditorIsMiddleMousePanMode(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L322) |
+| ImGui.TextEditorSetText(_id, text) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L331) |
+| ImGui.TextEditorGetText(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L342) |
+| ImGui.TextEditorGetCursorText(_id, cursor) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L352) |
+| ImGui.TextEditorGetLineText(_id, line) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L363) |
+| ImGui.TextEditorGetSectionText(_id, start_line, start_column, end_line, end_column) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L374) |
+| ImGui.TextEditorReplaceSectionText(_id, start_line, start_column, end_line, end_column, text) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L388) |
+| ImGui.TextEditorClearText(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L404) |
+| ImGui.TextEditorIsEmpty(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L414) |
+| ImGui.TextEditorGetLineCount(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L423) |
+| ImGui.TextEditorRender(_id, title, width, height, border) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L432) |
+| ImGui.TextEditorSetFocus(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L449) |
+| ImGui.TextEditorCut(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L459) |
+| ImGui.TextEditorCopy(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L469) |
+| ImGui.TextEditorPaste(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L479) |
+| ImGui.TextEditorUndo(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L489) |
+| ImGui.TextEditorRedo(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L499) |
+| ImGui.TextEditorCanUndo(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L509) |
+| ImGui.TextEditorCanRedo(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L518) |
+| ImGui.TextEditorGetUndoIndex(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L527) |
+| ImGui.TextEditorSetCursor(_id, line, column) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L536) |
+| ImGui.TextEditorSelectAll(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L548) |
+| ImGui.TextEditorSelectLine(_id, line) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L558) |
+| ImGui.TextEditorSelectLines(_id, start, _end) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L569) |
+| ImGui.TextEditorSelectRegion(_id, start_line, start_column, end_line, end_column) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L581) |
+| ImGui.TextEditorSelectToBrackets(_id, include_brackets) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L595) |
+| ImGui.TextEditorGrowSelectionsToCurlyBrackets(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L607) |
+| ImGui.TextEditorShrinkSelectionsToCurlyBrackets(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L617) |
+| ImGui.TextEditorAddNextOccurrence(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L627) |
+| ImGui.TextEditorSelectAllOccurrences(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L637) |
+| ImGui.TextEditorAnyCursorHasSelection(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L647) |
+| ImGui.TextEditorAllCursorsHaveSelection(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L656) |
+| ImGui.TextEditorCurrentCursorHasSelection(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L665) |
+| ImGui.TextEditorClearCursors(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L674) |
+| ImGui.TextEditorGetFirstVisibleLine(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L684) |
+| ImGui.TextEditorGetLastVisibleLine(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L693) |
+| ImGui.TextEditorGetFirstVisibleColumn(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L702) |
+| ImGui.TextEditorGetLastVisibleColumn(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L711) |
+| ImGui.TextEditorGetLineHeight(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L720) |
+| ImGui.TextEditorGetGlyphWidth(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L729) |
 | ImGui.AddFontFromFile(file, size) | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L30) |
 | ImGui.AddFontDefault() | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L45) |
 | ImGui.InputFloatN(label, v, len, step, step_fast, format, flags) | [imgui_input_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_input_gm.cpp#L131) |

@@ -37,10 +37,10 @@ GMFUNC(__imgui_invisible_button) {
 
 GMFUNC(__imgui_arrow_button) {
 	const char* str_id = YYGetString(arg, 0);
-	ImGuiDir dir = YYGetInt64(arg, 1);
+	double dir = YYGetReal(arg, 1);
 	
 	Result.kind = VALUE_BOOL;
-	Result.val = ImGui::ArrowButton(str_id, dir);
+	Result.val = ImGui::ArrowButton(str_id, (ImGuiDir)dir);
 }
 
 GMFUNC(__imgui_image) {
@@ -58,7 +58,8 @@ GMFUNC(__imgui_image) {
 	GMHIDDEN();
 	GMPASSTHROUGH(sprite_get_uvs(#arg0, #arg1));
 
-	ImGui::Image(GetTexture(sprite, subimg, TextureType_Sprite), ImVec2(width * uv[6], height * uv[7]), ImVec2(uv[0], uv[1]), ImVec2(uv[2], uv[3]), GMCOLOR_TO(color, alpha));
+	// TODO: tint was deprecated
+	ImGui::Image(GetTexture(sprite, subimg, TextureType_Sprite), ImVec2(width * uv[6], height * uv[7]), ImVec2(uv[0], uv[1]), ImVec2(uv[2], uv[3]));
 	Result.kind = VALUE_UNDEFINED;
 	delete[]uv;
 }
@@ -100,7 +101,8 @@ GMFUNC(__imgui_surface) {
 	GMPREPEND(var _tex = surface_get_texture(#arg0););
 	GMOVERRIDE(Surface);
 
-	ImGui::Image(GetTexture(surface, 0, TextureType_Surface), ImVec2(width * uv[6], height * uv[7]), ImVec2(uv[0], uv[1]), ImVec2(uv[2], uv[3]), GMCOLOR_TO(color, alpha));
+	// TODO: tint was deprecated
+	ImGui::Image(GetTexture(surface, 0, TextureType_Surface), ImVec2(width * uv[6], height * uv[7]), ImVec2(uv[0], uv[1]), ImVec2(uv[2], uv[3]));
 	Result.kind = VALUE_UNDEFINED;
 	delete[]uv;
 }

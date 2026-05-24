@@ -13,13 +13,15 @@ GMFUNC(__imgui_get_font_size) {
 GMFUNC(__imgui_push_font) {
 	RValue* ptr = &arg[0];
 	GMDEFAULT(undefined);
+	float font_size = YYGetFloat(arg, 1);
+	GMDEFAULT(0);
 
 	Result.kind = VALUE_UNDEFINED;
 	if (ptr->kind == VALUE_UNDEFINED) {
-		ImGui::PushFont(NULL);
+		ImGui::PushFont(NULL, font_size);
 		return;
 	}
-	ImGui::PushFont((ImFont*)ptr->ptr);
+	ImGui::PushFont((ImFont*)ptr->ptr, font_size);
 }
 
 GMFUNC(__imgui_pop_font) {

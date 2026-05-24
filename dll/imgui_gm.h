@@ -78,6 +78,11 @@ enum TextureType : char {
 	TextureType_Font = 1 << 2
 };
 
-static inline ImTextureID GetTexture(unsigned int id, unsigned int subimg, TextureType type=TextureType_Raw) {
-	return (ImTextureID)((((subimg << 8) | id) << 4) | type);
+static inline ImTextureRef GetTexture(unsigned int id, unsigned int subimg, TextureType type=TextureType_Raw) {
+	// Format:
+	// u64: 00000000000000000000000000000000 0000000000000000 0000
+	//      ^ subimg                         ^ id             ^ type
+	return ImTextureRef(
+		(subimg << 20) | (id << 4) | type
+	);
 }

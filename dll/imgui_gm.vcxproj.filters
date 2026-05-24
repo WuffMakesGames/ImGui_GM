@@ -33,9 +33,6 @@
     <ClInclude Include="imgui_gm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="imgui_impl_dx11.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="imgui_impl_gm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -97,9 +94,6 @@
     </ClCompile>
     <ClCompile Include="imgui_gm.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="imgui_impl_gm.cpp">
-      <Filter>Source Files\Wrappers</Filter>
     </ClCompile>
     <ClCompile Include="imgui_input_gm.cpp">
       <Filter>Source Files\Wrappers</Filter>
@@ -169,6 +163,9 @@
     </ClCompile>
     <ClCompile Include="imgui_ext_text_editor_gm.cpp">
       <Filter>Source Files\Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui_impl_gm.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

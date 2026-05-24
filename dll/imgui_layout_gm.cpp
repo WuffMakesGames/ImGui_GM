@@ -172,44 +172,44 @@ GMFUNC(__imgui_get_content_region_avail_y) {
 
 GMFUNC(__imgui_get_content_region_max_x) {
 	GMOVERRIDE(GetContentRegionMaxX);
-
-	Result.kind = VALUE_REAL;
-	Result.val = ImGui::GetContentRegionMax().x;
+	ShowError("As of ImGui 1.91.0 (July 2024): ImGui.GetContentRegionMaxX has been deprecated, use ImGui.GetContentRegionAvailX() + ImGui.GetCursorScreenPosX() - ImGui.GetWindowPosX() instead");
+	/*Result.kind = VALUE_REAL;
+	Result.val = ImGui::GetContentRegionMax().x;*/
 }
 
 GMFUNC(__imgui_get_content_region_max_y) {
 	GMOVERRIDE(GetContentRegionMaxY);
-
-	Result.kind = VALUE_REAL;
-	Result.val = ImGui::GetContentRegionMax().y;
+	ShowError("As of ImGui 1.91.0 (July 2024): ImGui.GetContentRegionMaxY has been deprecated, use ImGui.GetContentRegionAvailY() + ImGui.GetCursorScreenPosY() - ImGui.GetWindowPosY() instead");
+	/*Result.kind = VALUE_REAL;
+	Result.val = ImGui::GetContentRegionMax().y;*/
 }
 
 GMFUNC(__imgui_get_window_content_region_min_x) {
 	GMOVERRIDE(GetWindowContentRegionMinX);
-
-	Result.kind = VALUE_REAL;
-	Result.val = ImGui::GetWindowContentRegionMin().x;
+	ShowError("As of ImGui 1.91.0 (July 2024): ImGui.GetWindowContentRegionMinX has been deprecated, use ImGui.GetContentRegionAvailX() instead");
+	/*Result.kind = VALUE_REAL;
+	Result.val = ImGui::GetWindowContentRegionMin().x;*/
 }
 
 GMFUNC(__imgui_get_window_content_region_min_y) {
 	GMOVERRIDE(GetWindowContentRegionMinY);
-
-	Result.kind = VALUE_REAL;
-	Result.val = ImGui::GetWindowContentRegionMin().y;
+	ShowError("As of ImGui 1.91.0 (July 2024): ImGui.GetWindowContentRegionMinY has been deprecated, use ImGui.GetContentRegionAvailY() instead");
+	/*Result.kind = VALUE_REAL;
+	Result.val = ImGui::GetWindowContentRegionMin().y;*/
 }
 
 GMFUNC(__imgui_get_window_content_region_max_x) {
 	GMOVERRIDE(GetWindowContentRegionMaxX);
-
-	Result.kind = VALUE_REAL;
-	Result.val = ImGui::GetWindowContentRegionMax().x;
+	ShowError("As of ImGui 1.91.0 (July 2024): ImGui.GetWindowContentRegionMaxX has been deprecated, use ImGui.GetContentRegionAvailX() instead");
+	/*Result.kind = VALUE_REAL;
+	Result.val = ImGui::GetWindowContentRegionMax().x;*/
 }
 
 GMFUNC(__imgui_get_window_content_region_max_y) {
 	GMOVERRIDE(GetWindowContentRegionMaxY);
-
-	Result.kind = VALUE_REAL;
-	Result.val = ImGui::GetWindowContentRegionMax().y;
+	ShowError("As of ImGui 1.91.0 (July 2024): ImGui.GetWindowContentRegionMaxY has been deprecated, use ImGui.GetContentRegionAvailY() instead");
+	/*Result.kind = VALUE_REAL;
+	Result.val = ImGui::GetWindowContentRegionMax().y;*/
 }
 
 GMFUNC(__imgui_push_item_width) {

@@ -1,6 +1,5 @@
 #pragma once
 #include "imgui.h"
-#include "Extension_Interface.h"
 #include "YYRValue.h"
 
 IMGUI_IMPL_API bool ImGui_ImplGM_Init(void* handle);

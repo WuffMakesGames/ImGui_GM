@@ -88,7 +88,7 @@ GMFUNC(__imgui_show_stack_tool_window) {
 		}
 	}
 
-	ImGui::ShowStackToolWindow(p_open);
+	ImGui::ShowIDStackToolWindow(p_open);
 	Result.kind = VALUE_BOOL;
 	Result.val = open;
 }
@@ -154,6 +154,19 @@ GMFUNC(__imgui_push_id) {
 
 GMFUNC(__imgui_pop_id) {
 	ImGui::PopID();
+	Result.kind = VALUE_UNDEFINED;
+}
+
+GMFUNC(__imgui_push_item_flag) {
+	ImGuiItemFlags option = YYGetInt64(arg, 0);
+	bool enabled = YYGetBool(arg, 1);
+
+	ImGui::PushItemFlag(option, enabled);
+	Result.kind = VALUE_UNDEFINED;
+}
+
+GMFUNC(__imgui_pop_item_flag) {
+	ImGui::PopItemFlag();
 	Result.kind = VALUE_UNDEFINED;
 }
 
@@ -295,9 +308,15 @@ GMFUNC(__imgui_get_item_rect_size_y) {
 	Result.val = ImGui::GetItemRectSize().y;
 }
 
-GMFUNC(__imgui_set_item_allow_overlap) {
-	ImGui::SetItemAllowOverlap();
+GMFUNC(__imgui_set_next_item_allow_overlap) {
+	ImGui::SetNextItemAllowOverlap();
 	Result.kind = VALUE_UNDEFINED;
+}
+
+GMFUNC(__imgui_set_item_allow_overlap) {
+	ShowError("As of ImGui 1.92.5 (November 2025): ImGui.SetItemAllowOverlap has been deprecated, use ImGui.SetNextItemAllowOverlap() instead");
+	/*ImGui::SetItemAllowOverlap();
+	Result.kind = VALUE_UNDEFINED;*/
 }
 
 GMFUNC(__imgui_is_rect_visible) {
@@ -345,16 +364,19 @@ GMFUNC(__imgui_calc_text_height) {
 }
 
 GMFUNC(__imgui_push_allow_keyboard_focus) {
-	bool allow_keyboard_focus = YYGetBool(arg, 0);
+	ShowError("As of ImGui 1.92.0 (May 2025): ImGui.PushAllowKeyboardFocus has been deprecated, use ImGui.PushItemFlag(ImGuiItemFlags.NoTabStop, !tab_stop) instead");
+	/*bool allow_keyboard_focus = YYGetBool(arg, 0);
 
 	ImGui::PushAllowKeyboardFocus(allow_keyboard_focus);
-	Result.kind = VALUE_UNDEFINED;
+	Result.kind = VALUE_UNDEFINED;*/
 }
 
 GMFUNC(__imgui_pop_allow_keyboard_focus) {
-	ImGui::PopAllowKeyboardFocus();
-	Result.kind = VALUE_UNDEFINED;
+	ShowError("As of ImGui 1.92.0 (May 2025): ImGui.PushAllowKeyboardFocus has been deprecated, use ImGui.PopItemFlag() instead");
+	/*ImGui::PopAllowKeyboardFocus();
+	Result.kind = VALUE_UNDEFINED;*/
 }
+
 
 GMFUNC(__imgui_set_keyboard_focus_here) {
 	double offset = YYGetReal(arg, 0);
@@ -365,15 +387,17 @@ GMFUNC(__imgui_set_keyboard_focus_here) {
 }
 
 GMFUNC(__imgui_push_button_repeat) {
-	bool repeat = YYGetBool(arg, 0);
+	ShowError("As of ImGui 1.91.0 (July 2024): ImGui.PushButtonRepeat has been deprecated, use ImGui.PushItemFlag(ImGuiItemFlags.ButtonRepeat, ...) instead");
+	/*bool repeat = YYGetBool(arg, 0);
 
 	ImGui::PushButtonRepeat(repeat);
-	Result.kind = VALUE_UNDEFINED;
+	Result.kind = VALUE_UNDEFINED;*/
 }
 
 GMFUNC(__imgui_pop_button_repeat) {
-	ImGui::PopButtonRepeat();
-	Result.kind = VALUE_UNDEFINED;
+	ShowError("As of ImGui 1.91.0 (July 2024): ImGui.PopButtonRepeat has been deprecated, use ImGui.PopItemFlag() instead");
+	/*ImGui::PopButtonRepeat();
+	Result.kind = VALUE_UNDEFINED;*/
 }
 
 GMFUNC(__imgui_set_item_default_focus) {

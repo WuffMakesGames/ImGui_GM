@@ -4194,7 +4194,7 @@ void TextEditor::renderFindReplace(ImVec2 pos, float width) {
 		ImGui::SetNextWindowSize(ImVec2(windowWidth, windowHeight));
 		ImGui::SetNextWindowBgAlpha(0.75f);
 
-		ImGui::BeginChild("find-replace", ImVec2(windowWidth, windowHeight), ImGuiChildFlags_Border);
+		ImGui::BeginChild("find-replace", ImVec2(windowWidth, windowHeight), ImGuiChildFlags_FrameStyle);
 		ImGui::SetNextItemWidth(fieldWidth);
 
 		if (focusOnFind) {

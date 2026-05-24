@@ -52,7 +52,8 @@ GMFUNC(__imgui_end_child) {
 }
 
 GMFUNC(__imgui_begin_child_frame) {
-	double id = YYGetReal(arg, 0);
+	ShowError("As of ImGui 1.90 (Sept 2023): ImGui.BeginChildFrame has been deprecated, use ImGui.BeginChild(..., ImGuiChildFlags.FrameStyle) instead");
+	/*double id = YYGetReal(arg, 0);
 	double width = YYGetReal(arg, 1);
 	GMDEFAULT(0);
 	double height = YYGetReal(arg, 2);
@@ -61,12 +62,13 @@ GMFUNC(__imgui_begin_child_frame) {
 	GMDEFAULT(ImGuiWindowFlags.None);
 
 	Result.kind = VALUE_BOOL;
-	Result.val = ImGui::BeginChildFrame(id, ImVec2(width, height), flags);
+	Result.val = ImGui::BeginChildFrame(id, ImVec2(width, height), flags);*/
 }
 
 GMFUNC(__imgui_end_child_frame) {
-	ImGui::EndChildFrame();
-	Result.kind = VALUE_UNDEFINED;
+	ShowError("As of ImGui 1.90 (Sept 2023): ImGui.EndChildFrame has been deprecated, use ImGui.EndChild() instead");
+	/*ImGui::EndChildFrame();
+	Result.kind = VALUE_UNDEFINED;*/
 }
 
 GMFUNC(__imgui_is_window_appearing) {

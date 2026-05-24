@@ -105,7 +105,6 @@
     <ClInclude Include="imconfig.h" />
     <ClInclude Include="imgui.h" />
     <ClInclude Include="imgui_gm.h" />
-    <ClInclude Include="imgui_impl_dx11.h" />
     <ClInclude Include="imgui_impl_gm.h" />
     <ClInclude Include="imgui_internal.h" />
     <ClInclude Include="imgui_memory_editor.h" />

@@ -58,13 +58,13 @@ GMFUNC(__imgui_drawlist_add_rect) {
 	int col = YYGetReal(arg, 5);
 	double rounding = YYGetReal(arg, 6);
 	GMDEFAULT(0);
-	ImDrawFlags flags = YYGetInt64(arg, 7);
-	GMDEFAULT(ImDrawFlags.None);
-	double thickness = YYGetReal(arg, 8);
+	double thickness = YYGetReal(arg, 7);
 	GMDEFAULT(1);
+	ImDrawFlags flags = YYGetInt64(arg, 8);
+	GMDEFAULT(ImDrawFlags.None);
 	GMOVERRIDE(DrawListAddRect);
 
-	list->AddRect(ImVec2(x1, y1), ImVec2(x2, y2), col | (0xFF << 24), rounding, flags, thickness);
+	list->AddRect(ImVec2(x1, y1), ImVec2(x2, y2), col | (0xFF << 24), rounding, thickness, flags);
 	Result.kind = VALUE_UNDEFINED;
 }
 
@@ -263,9 +263,9 @@ GMFUNC(__imgui_drawlist_add_polyline) {
 	RValue* positions = &arg[1];
 	GMHINT(Array<Real>);
 	int col = YYGetReal(arg, 2);
-	ImDrawFlags flags = YYGetInt64(arg, 3);
+	double thickness = YYGetReal(arg, 3);
+	ImDrawFlags flags = YYGetInt64(arg, 4);
 	GMHINT(Enum.ImDrawFlags);
-	double thickness = YYGetReal(arg, 4);
 	double num_points = YYGetReal(arg, 5);
 	GMHIDDEN();
 	GMPASSTHROUGH(array_length(#arg1));
@@ -280,7 +280,7 @@ GMFUNC(__imgui_drawlist_add_polyline) {
 		p.push_back(ImVec2(x, y));
 	}
 
-	list->AddPolyline(p.Data, p.Size, col | (0xFF << 24), flags, thickness);
+	list->AddPolyline(p.Data, p.Size, col | (0xFF << 24), thickness, flags);
 	Result.kind = VALUE_UNDEFINED;
 }
 
@@ -356,13 +356,13 @@ GMFUNC(__imgui_drawlist_path_fill_convex) {
 GMFUNC(__imgui_drawlist_path_stroke) {
 	ImDrawList* list = (ImDrawList*)YYGetPtr(arg, 0);
 	int col = YYGetReal(arg, 1);
-	ImDrawFlags flags = YYGetInt64(arg, 2);
-	GMDEFAULT(ImDrawFlags.None);
-	double thickness = YYGetReal(arg, 3);
+	double thickness = YYGetReal(arg, 2);
 	GMDEFAULT(1);
+	ImDrawFlags flags = YYGetInt64(arg, 3);
+	GMDEFAULT(ImDrawFlags.None);
 	GMOVERRIDE(DrawListPathStroke);
 
-	list->PathStroke(col | (0xFF << 24), flags, thickness);
+	list->PathStroke(col | (0xFF << 24), thickness, flags);
 	Result.kind = VALUE_UNDEFINED;
 }
 
@@ -539,21 +539,21 @@ GMFUNC(__imgui_drawlist_pop_clip_rect) {
 	Result.kind = VALUE_UNDEFINED;
 }
 
-GMFUNC(__imgui_drawlist_push_textureid) {
+GMFUNC(__imgui_drawlist_push_texture) {
 	ImDrawList* list = (ImDrawList*)YYGetPtr(arg, 0);
 	double sprite = YYGetReal(arg, 1);
 	double subimg = YYGetReal(arg, 2);
-	GMOVERRIDE(DrawListPushTextureID);
+	GMOVERRIDE(DrawListPushTexture);
 
-	list->PushTextureID(GetTexture(sprite, subimg, TextureType_Sprite));
+	list->PushTexture(GetTexture(sprite, subimg, TextureType_Sprite));
 	Result.kind = VALUE_UNDEFINED;
 }
 
-GMFUNC(__imgui_drawlist_pop_textureid) {
+GMFUNC(__imgui_drawlist_pop_texture) {
 	ImDrawList* list = (ImDrawList*)YYGetPtr(arg, 0);
-	GMOVERRIDE(DrawListPopTextureID);
+	GMOVERRIDE(DrawListPopTexture);
 
-	list->PopTextureID();
+	list->PopTexture();
 	Result.kind = VALUE_UNDEFINED;
 }
 

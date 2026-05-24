@@ -25,6 +25,7 @@ bool ImGui_ImplGM_Init(void* handle) {
 	io.BackendPlatformUserData = (void*)bd;
 	io.BackendPlatformName = "imgui_impl_gm";
 	io.BackendFlags |= ImGuiBackendFlags_HasMouseCursors;
+	io.BackendFlags |= ImGuiBackendFlags_RendererHasVtxOffset;
 
 	ImGui::GetMainViewport()->PlatformHandleRaw = handle;
 	return true;
@@ -58,20 +59,22 @@ void ImGui_ImplGM_NewFrame(RValue* const state) {
 	}
 
 	RValue* display = YYStructGetMember(state, "Display");
-	RValue* input = YYStructGetMember(state, "Input");
-	RValue* engine = YYStructGetMember(state, "Engine");
-	RValue* mouse = YYStructGetMember(input, "Mouse");
 	RValue* display_width = YYStructGetMember(display, "Width");
 	RValue* display_height = YYStructGetMember(display, "Height");
+	io.DisplaySize = ImVec2(display_width->val, display_height->val);
+
+	RValue* input = YYStructGetMember(state, "Input");
+	RValue* mouse = YYStructGetMember(input, "Mouse");
 	RValue* mouse_x = YYStructGetMember(mouse, "X");
 	RValue* mouse_y = YYStructGetMember(mouse, "Y");
+	io.MousePos = ImVec2(mouse_x->val, mouse_y->val);
+
+	RValue* engine = YYStructGetMember(state, "Engine");
 	RValue* framerate = YYStructGetMember(engine, "Framerate");
 	RValue* time = YYStructGetMember(engine, "Time");
-
-	io.DisplaySize = ImVec2(display_width->val, display_height->val);
-	io.MousePos = ImVec2(mouse_x->val, mouse_y->val);
 	io.Framerate = framerate->val;
 	io.DeltaTime = time->val;
+
 }
 
 void ImGui_ImplGM_RenderDrawData(ImDrawData* data) {
@@ -95,7 +98,7 @@ void ImGui_ImplGM_RenderDrawData(ImDrawData* data) {
 					BufferWrite<bool>(g_CommandBuffer, false, cmd_offset);
 
 					ImTextureID texture = cmd->GetTexID();
-					BufferWrite<unsigned int>(g_CommandBuffer, (texture & 0xF) != TextureType_Raw ? texture : 0, cmd_offset);
+					BufferWrite<uint64>(g_CommandBuffer, texture, cmd_offset);
 					BufferWrite<float>(g_CommandBuffer, cmd->ClipRect.x, cmd_offset);
 					BufferWrite<float>(g_CommandBuffer, cmd->ClipRect.y, cmd_offset);
 					BufferWrite<float>(g_CommandBuffer, cmd->ClipRect.z, cmd_offset);

@@ -1,17 +1,18 @@
 @echo off
 Rem Copies ImGui into project and Runner headers
-Rem Sorry if this isn't the right way to do this
-Rem At least it works... right?
+Rem Ensure that "runtime" below is downloaded or adjusted
 
-copy "thirdparty\imgui\im*.cpp"
+set imgui=thirdparty\imgui
+copy "%imgui%\im*.cpp"
 rename "imconfig.h" "_imconfig.h"
-copy "thirdparty\imgui\im*.h"
+copy "%imgui%\im*.h"
 del "imconfig.h"
 rename "_imconfig.h" "imconfig.h"
-copy "thirdparty\imgui\backends\imgui_impl_dx11.*"
+copy "%imgui%\misc\cpp\imgui_stdlib.*"
+copy "%imgui%\backends\imgui_impl_dx11.*"
 
 set program=GameMakerStudio2-Beta
-set runtime=runtime-2024.200.0.523
+set runtime=runtime-2024.1400.5.1031
 set base=%PROGRAMDATA%\%program%\Cache\runtimes\%runtime%\yyc\include
 
 copy "%base%\extension\YYRunnerInterface.h" "Extension_Interface.h"

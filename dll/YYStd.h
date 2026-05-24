@@ -113,6 +113,7 @@ public:
 
 struct RValue;
 
+/*
 YYCEXTERN void* YYAlloc( int _size );
 YYCEXTERN void* YYRealloc( void* _p, int _size );
 YYCEXTERN void YYFree( const void* _p );
@@ -123,6 +124,6 @@ YYCEXTERN void YYCreateString( RValue* _pVal, const char* _pS );
 YYCEXTERN void YYSetString( RValue* _pVal, const char* _pS );
 YYCEXTERN void YYConstString(RValue* _pVal, const char* _pS); 
 YYCEXTERN void YYStrFree( const char* _pS );
-
+*/
 
 #endif

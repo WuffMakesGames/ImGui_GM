@@ -1,7 +1,7 @@
 /**
 *  This script includes snake_case function defintions for ImGui_GM, as an alternative to the namespaced convention
 *  To use, just drop this script into your project with ImGui_GM
-*  Generated at 5/24/2026, 1:21:05 PM
+*  Generated at 5/24/2026, 1:53:53 PM
 */
 
 /// @function imgui_initialize
@@ -517,6 +517,15 @@ function imgui_dock_space(_id, width=0, height=0, flags=ImGuiDockNodeFlags.None)
 	return __imgui_dock_space(_id, width, height, flags);
 }
 
+/// @function imgui_dock_space_over_viewport(_id, viewport, flags)
+/// @argument {Real} _id
+/// @argument {Real} viewport
+/// @argument {Enum.ImGuiDockNodeFlags} [flags=ImGuiDockNodeFlags.None]
+/// @return {Real}
+function imgui_dock_space_over_viewport(_id, viewport, flags=ImGuiDockNodeFlags.None) {
+	return __imgui_dock_space_over_viewport(_id, viewport, flags);
+}
+
 /// @function imgui_set_next_window_dock_id(dock_id, cond)
 /// @argument {Real} dock_id
 /// @argument {Enum.ImGuiCond} [cond=ImGuiCond.None]
@@ -611,6 +620,15 @@ function imgui_dockbuilder_set_node_pos(node_id, _x, _y) {
 /// @return {Undefined}
 function imgui_dockbuilder_set_node_size(node_id, width, height) {
 	return __imgui_dockbuilder_set_node_size(node_id, width, height);
+}
+
+/// @function imgui_dockbuilder_split_node(node_id, split_dir, size_ratio_for_node_at_dir)
+/// @argument {Real} node_id
+/// @argument {Real} split_dir
+/// @argument {Real} size_ratio_for_node_at_dir
+/// @return {Array<ImGuiID>}
+function imgui_dockbuilder_split_node(node_id, split_dir, size_ratio_for_node_at_dir) {
+	return __imgui_dockbuilder_split_node(node_id, split_dir, size_ratio_for_node_at_dir);
 }
 
 /// @function imgui_dockbuilder_copy_dock_space()

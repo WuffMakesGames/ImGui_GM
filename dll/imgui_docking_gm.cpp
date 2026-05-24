@@ -14,17 +14,16 @@ GMFUNC(__imgui_dock_space) {
     Result.val = ImGui::DockSpace(id, ImVec2(width, height), flags, NULL);
 }
 
-/*
 GMFUNC(__imgui_dock_space_over_viewport) {
-    // TODO: viewport
-    ImGuiDockNodeFlags flags = YYGetInt64(arg, 0);
+    ImGuiID id = YYGetReal(arg, 0);
+    int viewport = YYGetReal(arg, 1); // TODO: lookup viewport
+    ImGuiDockNodeFlags flags = YYGetInt64(arg, 2);
     GMDEFAULT(ImGuiDockNodeFlags.None);
     // TODO: window_class
 
     Result.kind = VALUE_REAL;
-    Result.val = ImGui::DockSpaceOverViewport(NULL, flags, NULL);
+    Result.val = ImGui::DockSpaceOverViewport(id, NULL, flags, NULL);
 }
-*/
 
 GMFUNC(__imgui_set_next_window_dock_id) {
     ImGuiID dock_id = YYGetReal(arg, 0);
@@ -124,20 +123,18 @@ GMFUNC(__imgui_dockbuilder_set_node_size) {
     Result.kind = VALUE_UNDEFINED;
 }
 
-/*
 GMFUNC(__imgui_dockbuilder_split_node) {
     ImGuiID node_id = YYGetReal(arg, 0);
-    ImGuiDir split_dir = YYGetInt64(arg, 1);
+    double split_dir = YYGetReal(arg, 1);
     float size_ratio_for_node_at_dir = YYGetReal(arg, 2);
     GMRETURN(Array<ImGuiID>);
 
     ImGuiID out_id_at_dir;
     ImGuiID out_id_at_opposite_dir;
-    ImGuiID parent_id = ImGui::DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir, &out_id_at_dir, &out_id_at_opposite_dir);
+    ImGuiID parent_id = ImGui::DockBuilderSplitNode(node_id, (ImGuiDir)split_dir, size_ratio_for_node_at_dir, &out_id_at_dir, &out_id_at_opposite_dir);
     ImGuiID output_ids[3]{ parent_id, out_id_at_dir, out_id_at_opposite_dir };
     YYSetArray(&Result, output_ids, 3);
 }
-*/
 
 GMFUNC(__imgui_dockbuilder_copy_dock_space) {
     GMOVERRIDE(DockBuilderCopyDockSpace);

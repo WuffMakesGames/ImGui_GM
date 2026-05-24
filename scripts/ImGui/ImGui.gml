@@ -571,6 +571,16 @@ function ImGui() constructor {
 		return __imgui_dock_space(_id, width, height, flags);
 	}
 
+	/// @function DockSpaceOverViewport(_id, viewport, flags)
+	/// @argument {Real} _id
+	/// @argument {Real} viewport
+	/// @argument {Enum.ImGuiDockNodeFlags} [flags=ImGuiDockNodeFlags.None]
+	/// @context ImGui
+	/// @return {Real}
+	static DockSpaceOverViewport = function(_id, viewport, flags=ImGuiDockNodeFlags.None) {
+		return __imgui_dock_space_over_viewport(_id, viewport, flags);
+	}
+
 	/// @function SetNextWindowDockID(dock_id, cond)
 	/// @argument {Real} dock_id
 	/// @argument {Enum.ImGuiCond} [cond=ImGuiCond.None]
@@ -678,6 +688,16 @@ function ImGui() constructor {
 	/// @return {Undefined}
 	static DockBuilderSetNodeSize = function(node_id, width, height) {
 		return __imgui_dockbuilder_set_node_size(node_id, width, height);
+	}
+
+	/// @function DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir)
+	/// @argument {Real} node_id
+	/// @argument {Real} split_dir
+	/// @argument {Real} size_ratio_for_node_at_dir
+	/// @context ImGui
+	/// @return {Array<ImGuiID>}
+	static DockBuilderSplitNode = function(node_id, split_dir, size_ratio_for_node_at_dir) {
+		return __imgui_dockbuilder_split_node(node_id, split_dir, size_ratio_for_node_at_dir);
 	}
 
 	/// @function DockBuilderCopyDockSpace()

@@ -74,7 +74,7 @@ This is an automatically generated file that keeps track of wrapper coverage of 
 | ImGui::SetScrollFromPosX | ✅ | [imgui_window_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_window_gm.cpp#L251) | N/A |
 | ImGui::SetScrollFromPosY | ✅ | [imgui_window_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_window_gm.cpp#L260) | N/A |
 | ImGui::PushFont | ✅ | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L13) | Fonts are currently unimplemented |
-| ImGui::PopFont | ✅ | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L27) | Fonts are currently unimplemented |
+| ImGui::PopFont | ✅ | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L28) | Fonts are currently unimplemented |
 | ImGui::GetFont | ✅ | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L3) | N/A |
 | ImGui::GetFontSize | ✅ | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L8) | N/A |
 | ImGui::GetFontBaked | ❌ | N/A | N/A |
@@ -572,8 +572,8 @@ Below is a table of non-standard functions made specifically for ImGui_GM
 | ImGui.TextEditorGetLastVisibleColumn(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L711) |
 | ImGui.TextEditorGetLineHeight(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L720) |
 | ImGui.TextEditorGetGlyphWidth(_id) | [imgui_ext_text_editor_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_ext_text_editor_gm.cpp#L729) |
-| ImGui.AddFontFromFile(file, size) | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L32) |
-| ImGui.AddFontDefault() | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L47) |
+| ImGui.AddFontFromFile(file, size) | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L33) |
+| ImGui.AddFontDefault() | [imgui_fonts_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_fonts_gm.cpp#L48) |
 | ImGui.InputFloatN(label, v, len, step, step_fast, format, flags) | [imgui_input_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_input_gm.cpp#L131) |
 | ImGui.InputIntN(label, v, flags, count) | [imgui_input_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_input_gm.cpp#L219) |
 | ImGui.GetCursorStartPosX() | [imgui_layout_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_layout_gm.cpp#L81) |

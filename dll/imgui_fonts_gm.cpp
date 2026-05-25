@@ -21,7 +21,8 @@ GMFUNC(__imgui_push_font) {
 		ImGui::PushFont(NULL, font_size);
 		return;
 	}
-	ImGui::PushFont((ImFont*)ptr->ptr, font_size);
+	ImFont* font = (ImFont*)ptr->ptr;
+	ImGui::PushFont(font, font_size != 0 ? font_size : font->LegacySize);
 }
 
 GMFUNC(__imgui_pop_font) {

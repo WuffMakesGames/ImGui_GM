@@ -1,3 +1,4 @@
+game_set_speed(max(display_get_frequency(), 60), gamespeed_fps);
 ImGui.__Initialize();
 ImGui.ConfigFlagToggle(ImGuiConfigFlags.DockingEnable);	
 

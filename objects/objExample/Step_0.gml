@@ -6,7 +6,7 @@ if (tick++ % game_get_speed(gamespeed_fps) == 0) {
 }
 
 /// Docking
-if (enable_docking) ImGui.DockSpaceOverViewport(ImGui.GetID("ViewportDockspace"), 0);
+if (enable_docking) ImGui.DockSpaceOverViewport(0, 0);
 
 // Setup
 if (!surface_exists(surf)) {

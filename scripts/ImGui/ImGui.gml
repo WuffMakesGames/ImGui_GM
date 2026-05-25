@@ -428,13 +428,6 @@ function ImGui() constructor {
 		return __imgui_config_flag_toggle(flag);
 	}
 
-	/// @function GetMainViewport()
-	/// @context ImGui
-	/// @return {Pointer}
-	static GetMainViewport = function() {
-		return __imgui_get_main_viewport();
-	}
-
 	/// @function LogText(text)
 	/// @argument {String} text
 	/// @context ImGui
@@ -560,6 +553,13 @@ function ImGui() constructor {
 		return __imgui_combo();
 	}
 
+	/// @function GetMainViewport()
+	/// @context ImGui
+	/// @return {Real}
+	static GetMainViewport = function() {
+		return __imgui_get_main_viewport();
+	}
+
 	/// @function DockSpace(_id, width, height, flags)
 	/// @argument {Real} _id
 	/// @argument {Real} [width=0]
@@ -573,11 +573,11 @@ function ImGui() constructor {
 
 	/// @function DockSpaceOverViewport(_id, viewport, flags)
 	/// @argument {Real} _id
-	/// @argument {Real} viewport
+	/// @argument {Real} [viewport=0]
 	/// @argument {Enum.ImGuiDockNodeFlags} [flags=ImGuiDockNodeFlags.None]
 	/// @context ImGui
 	/// @return {Real}
-	static DockSpaceOverViewport = function(_id, viewport, flags=ImGuiDockNodeFlags.None) {
+	static DockSpaceOverViewport = function(_id, viewport=0, flags=ImGuiDockNodeFlags.None) {
 		return __imgui_dock_space_over_viewport(_id, viewport, flags);
 	}
 
@@ -631,7 +631,7 @@ function ImGui() constructor {
 	/// @function DockBuilderGetCentralNode(node_id)
 	/// @argument {Real} node_id
 	/// @context ImGui
-	/// @return {Pointer}
+	/// @return {Real}
 	static DockBuilderGetCentralNode = function(node_id) {
 		return __imgui_dockbuilder_get_central_node(node_id);
 	}

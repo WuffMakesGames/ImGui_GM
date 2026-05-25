@@ -1,5 +1,10 @@
 #include "imgui_gm.h"
 
+GMFUNC(__imgui_get_main_viewport) {
+    Result.kind = VALUE_REAL;
+    Result.val = ImGui::GetMainViewport()->ID;
+}
+
 GMFUNC(__imgui_dock_space) {
     ImGuiID id = YYGetReal(arg, 0);
     double width = YYGetReal(arg, 1);
@@ -16,13 +21,14 @@ GMFUNC(__imgui_dock_space) {
 
 GMFUNC(__imgui_dock_space_over_viewport) {
     ImGuiID id = YYGetReal(arg, 0);
-    int viewport = YYGetReal(arg, 1); // TODO: lookup viewport
+    ImGuiID viewport = YYGetReal(arg, 1);
+    GMDEFAULT(0);
     ImGuiDockNodeFlags flags = YYGetInt64(arg, 2);
     GMDEFAULT(ImGuiDockNodeFlags.None);
     // TODO: window_class
 
     Result.kind = VALUE_REAL;
-    Result.val = ImGui::DockSpaceOverViewport(id, NULL, flags, NULL);
+    Result.val = ImGui::DockSpaceOverViewport(id, (viewport != 0 ? ImGui::FindViewportByID(viewport) : NULL), flags, NULL);
 }
 
 GMFUNC(__imgui_set_next_window_dock_id) {
@@ -50,6 +56,9 @@ GMFUNC(__imgui_is_window_docked) {
     Result.val = ImGui::IsWindowDocked();
 }
 
+/// <summary>
+/// Dockbuilder API
+/// </summary>
 GMFUNC(__imgui_dockbuilder_dock_window) {
     const char* window_name = YYGetString(arg, 0);
     ImGuiID node_id = YYGetReal(arg, 1);
@@ -68,8 +77,8 @@ GMFUNC(__imgui_dockbuilder_get_node) {
 GMFUNC(__imgui_dockbuilder_get_central_node) {
     ImGuiID node_id = YYGetReal(arg, 0);
 
-    Result.kind = VALUE_PTR;
-    Result.ptr = ImGui::DockBuilderGetCentralNode(node_id);
+    Result.kind = VALUE_REAL;
+    Result.val = ImGui::DockBuilderGetCentralNode(node_id)->ID;
 }
 
 GMFUNC(__imgui_dockbuilder_add_node) {
@@ -139,12 +148,6 @@ GMFUNC(__imgui_dockbuilder_split_node) {
 GMFUNC(__imgui_dockbuilder_copy_dock_space) {
     GMOVERRIDE(DockBuilderCopyDockSpace);
     ShowError("Unimplemented ImGui Function: ImGui.DockBuilderCopyDockSpace");
-    /*
-    ImGuiID src_dockspace_id = YYGetReal(arg, 0);
-    ImGuiID dst_dockspace_id = YYGetReal(arg, 1);
-    // TODO: in_window_remap_pairs
-    ImGui::DockBuilderCopyDockSpace(src_dockspace_id, dst_dockspace_id, ImVector<const char*>);
-    */
 }
 
 GMFUNC(__imgui_dockbuilder_copy_node) {

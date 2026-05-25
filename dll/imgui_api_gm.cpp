@@ -431,11 +431,6 @@ GMFUNC(__imgui_config_flag_toggle) {
 	Result.val = io.ConfigFlags & flag;
 }
 
-GMFUNC(__imgui_get_main_viewport) {
-	Result.kind = VALUE_PTR;
-	Result.ptr = ImGui::GetMainViewport();
-}
-
 GMFUNC(__imgui_log_text) {
 	const char* text = YYGetString(arg, 0);
 

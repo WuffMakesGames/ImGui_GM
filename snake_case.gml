@@ -1,7 +1,7 @@
 /**
 *  This script includes snake_case function defintions for ImGui_GM, as an alternative to the namespaced convention
 *  To use, just drop this script into your project with ImGui_GM
-*  Generated at 5/24/2026, 1:53:53 PM
+*  Generated at 5/24/2026, 2:22:30 PM
 */
 
 /// @function imgui_initialize
@@ -390,12 +390,6 @@ function imgui_config_flag_toggle(flag) {
 	return __imgui_config_flag_toggle(flag);
 }
 
-/// @function imgui_get_main_viewport()
-/// @return {Pointer}
-function imgui_get_main_viewport() {
-	return __imgui_get_main_viewport();
-}
-
 /// @function imgui_log_text(text)
 /// @argument {String} text
 /// @return {Undefined}
@@ -507,6 +501,12 @@ function imgui_combo() {
 	return __imgui_combo();
 }
 
+/// @function imgui_get_main_viewport()
+/// @return {Real}
+function imgui_get_main_viewport() {
+	return __imgui_get_main_viewport();
+}
+
 /// @function imgui_dock_space(_id, width, height, flags)
 /// @argument {Real} _id
 /// @argument {Real} [width=0]
@@ -519,10 +519,10 @@ function imgui_dock_space(_id, width=0, height=0, flags=ImGuiDockNodeFlags.None)
 
 /// @function imgui_dock_space_over_viewport(_id, viewport, flags)
 /// @argument {Real} _id
-/// @argument {Real} viewport
+/// @argument {Real} [viewport=0]
 /// @argument {Enum.ImGuiDockNodeFlags} [flags=ImGuiDockNodeFlags.None]
 /// @return {Real}
-function imgui_dock_space_over_viewport(_id, viewport, flags=ImGuiDockNodeFlags.None) {
+function imgui_dock_space_over_viewport(_id, viewport=0, flags=ImGuiDockNodeFlags.None) {
 	return __imgui_dock_space_over_viewport(_id, viewport, flags);
 }
 
@@ -569,7 +569,7 @@ function imgui_dockbuilder_get_node(node_id) {
 
 /// @function imgui_dockbuilder_get_central_node(node_id)
 /// @argument {Real} node_id
-/// @return {Pointer}
+/// @return {Real}
 function imgui_dockbuilder_get_central_node(node_id) {
 	return __imgui_dockbuilder_get_central_node(node_id);
 }

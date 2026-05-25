@@ -57,9 +57,9 @@ GMFUNC(__imgui_image) {
 	double* uv = YYGetArray<double>(arg, 6, 8);
 	GMHIDDEN();
 	GMPASSTHROUGH(sprite_get_uvs(#arg0, #arg1));
+	GMOVERRIDE(Image);
 
-	// TODO: tint was deprecated
-	ImGui::Image(GetTexture(sprite, subimg, TextureType_Sprite), ImVec2(width * uv[6], height * uv[7]), ImVec2(uv[0], uv[1]), ImVec2(uv[2], uv[3]));
+	ImGui::ImageWithBg(GetTexture(sprite, subimg, TextureType_Sprite), ImVec2(width * uv[6], height * uv[7]), ImVec2(uv[0], uv[1]), ImVec2(uv[2], uv[3]), ImVec4(), GMCOLOR_TO(color, alpha));
 	Result.kind = VALUE_UNDEFINED;
 	delete[]uv;
 }
@@ -101,10 +101,9 @@ GMFUNC(__imgui_surface) {
 	GMPREPEND(var _tex = surface_get_texture(#arg0););
 	GMOVERRIDE(Surface);
 
-	// TODO: tint was deprecated
-	ImGui::Image(GetTexture(surface, 0, TextureType_Surface), ImVec2(width * uv[6], height * uv[7]), ImVec2(uv[0], uv[1]), ImVec2(uv[2], uv[3]));
+	ImGui::ImageWithBg(GetTexture(surface, 0, TextureType_Surface), ImVec2(width * uv[6], height * uv[7]), ImVec2(uv[0], uv[1]), ImVec2(uv[2], uv[3]), ImVec4(), GMCOLOR_TO(color, alpha));
 	Result.kind = VALUE_UNDEFINED;
-	delete[]uv;
+	delete[] uv;
 }
 
 GMFUNC(__imgui_checkbox) {

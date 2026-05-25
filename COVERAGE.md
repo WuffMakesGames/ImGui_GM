@@ -150,13 +150,13 @@ This is an automatically generated file that keeps track of wrapper coverage of 
 | ImGui::SmallButton | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L18) | N/A |
 | ImGui::InvisibleButton | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L25) | N/A |
 | ImGui::ArrowButton | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L38) | N/A |
-| ImGui::Checkbox | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L110) | N/A |
-| ImGui::CheckboxFlags | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L119) | N/A |
-| ImGui::CheckboxFlags | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L119) | N/A |
-| ImGui::RadioButton | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L129) | N/A |
-| ImGui::RadioButton | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L129) | N/A |
-| ImGui::ProgressBar | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L137) | N/A |
-| ImGui::Bullet | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L150) | N/A |
+| ImGui::Checkbox | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L109) | N/A |
+| ImGui::CheckboxFlags | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L118) | N/A |
+| ImGui::CheckboxFlags | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L118) | N/A |
+| ImGui::RadioButton | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L128) | N/A |
+| ImGui::RadioButton | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L128) | N/A |
+| ImGui::ProgressBar | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L136) | N/A |
+| ImGui::Bullet | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L149) | N/A |
 | ImGui::TextLink | ❌ | N/A | N/A |
 | ImGui::TextLinkOpenURL | ❌ | N/A | N/A |
 | ImGui::Image | ✅ | [imgui_widgets_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_widgets_gm.cpp#L46) | N/A |
@@ -309,18 +309,18 @@ This is an automatically generated file that keeps track of wrapper coverage of 
 | ImGui::EndTabItem | ✅ | [imgui_tabs_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_tabs_gm.cpp#L38) | N/A |
 | ImGui::TabItemButton | ✅ | [imgui_tabs_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_tabs_gm.cpp#L43) | N/A |
 | ImGui::SetTabItemClosed | ✅ | [imgui_tabs_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_tabs_gm.cpp#L52) | N/A |
-| ImGui::DockSpace | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L3) | N/A |
-| ImGui::DockSpaceOverViewport | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L17) | N/A |
-| ImGui::SetNextWindowDockID | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L28) | N/A |
-| ImGui::SetNextWindowClass | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L38) | N/A |
-| ImGui::GetWindowDockID | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L43) | N/A |
-| ImGui::IsWindowDocked | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L48) | N/A |
+| ImGui::DockSpace | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L8) | N/A |
+| ImGui::DockSpaceOverViewport | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L22) | N/A |
+| ImGui::SetNextWindowDockID | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L34) | N/A |
+| ImGui::SetNextWindowClass | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L44) | N/A |
+| ImGui::GetWindowDockID | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L49) | N/A |
+| ImGui::IsWindowDocked | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L54) | N/A |
 | ImGui::LogToTTY | ❌ | N/A | N/A |
 | ImGui::LogToFile | ❌ | N/A | N/A |
 | ImGui::LogToClipboard | ❌ | N/A | N/A |
 | ImGui::LogFinish | ❌ | N/A | N/A |
 | ImGui::LogButtons | ❌ | N/A | N/A |
-| ImGui::LogText | ✅ | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L439) | N/A |
+| ImGui::LogText | ✅ | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L434) | N/A |
 | ImGui::LogTextV | ❌ | N/A | Unsupported, use `string` function in GameMaker for string formatting |
 | ImGui::BeginDragDropSource | ✅ | [imgui_payload_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_payload_gm.cpp#L3) | N/A |
 | ImGui::SetDragDropPayload | ✅ | [imgui_payload_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_payload_gm.cpp#L26) | See [Drag and Drop Payloads](https://github.com/nommiin/ImGui_GM/wiki/Drag-and-Drop-Payloads) for more info on handling payloads |
@@ -355,7 +355,7 @@ This is an automatically generated file that keeps track of wrapper coverage of 
 | ImGui::GetItemRectMax | ❌ | N/A | N/A |
 | ImGui::GetItemRectSize | ❌ | N/A | N/A |
 | ImGui::GetItemFlags | ❌ | N/A | N/A |
-| ImGui::GetMainViewport | ✅ | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L434) | N/A |
+| ImGui::GetMainViewport | ✅ | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L3) | N/A |
 | ImGui::GetBackgroundDrawList | ✅ | [imgui_drawlist_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_drawlist_gm.cpp#L4) | N/A |
 | ImGui::GetForegroundDrawList | ✅ | [imgui_drawlist_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_drawlist_gm.cpp#L18) | N/A |
 | ImGui::IsRectVisible | ✅ | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L322) | N/A |
@@ -441,24 +441,24 @@ Below is a table of non-standard functions made specifically for ImGui_GM
 | ImGui.ConfigFlagsGet() | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L408) |
 | ImGui.ConfigFlagsSet(flags) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L416) |
 | ImGui.ConfigFlagToggle(flag) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L424) |
-| ImGui.WantKeyboardCapture(val) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L446) |
-| ImGui.WantMouseCapture(val) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L461) |
-| ImGui.WantTextInput(val) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L476) |
-| ImGui.WantMouseCaptureUnlessPopupClose(val) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L491) |
-| ImGui.DockBuilderDockWindow(window_name, node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L53) |
-| ImGui.DockBuilderGetNode(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L61) |
-| ImGui.DockBuilderGetCentralNode(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L68) |
-| ImGui.DockBuilderAddNode(node_id, flags) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L75) |
-| ImGui.DockBuilderRemoveNode(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L85) |
-| ImGui.DockBuilderRemoveNodeDockedWindows(node_id, clear_settings_refs) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L92) |
-| ImGui.DockBuilderRemoveNodeChildNodes(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L101) |
-| ImGui.DockBuilderSetNodePos(node_id, _x, _y) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L108) |
-| ImGui.DockBuilderSetNodeSize(node_id, width, height) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L117) |
-| ImGui.DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L126) |
-| ImGui.DockBuilderCopyDockSpace() | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L139) |
-| ImGui.DockBuilderCopyDockNode() | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L150) |
-| ImGui.DockBuilderCopyWindowSettings(src_name, dst_name) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L155) |
-| ImGui.DockBuilderFinish(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L163) |
+| ImGui.WantKeyboardCapture(val) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L441) |
+| ImGui.WantMouseCapture(val) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L456) |
+| ImGui.WantTextInput(val) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L471) |
+| ImGui.WantMouseCaptureUnlessPopupClose(val) | [imgui_api_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_api_gm.cpp#L486) |
+| ImGui.DockBuilderDockWindow(window_name, node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L62) |
+| ImGui.DockBuilderGetNode(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L70) |
+| ImGui.DockBuilderGetCentralNode(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L77) |
+| ImGui.DockBuilderAddNode(node_id, flags) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L84) |
+| ImGui.DockBuilderRemoveNode(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L94) |
+| ImGui.DockBuilderRemoveNodeDockedWindows(node_id, clear_settings_refs) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L101) |
+| ImGui.DockBuilderRemoveNodeChildNodes(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L110) |
+| ImGui.DockBuilderSetNodePos(node_id, _x, _y) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L117) |
+| ImGui.DockBuilderSetNodeSize(node_id, width, height) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L126) |
+| ImGui.DockBuilderSplitNode(node_id, split_dir, size_ratio_for_node_at_dir) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L135) |
+| ImGui.DockBuilderCopyDockSpace() | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L148) |
+| ImGui.DockBuilderCopyDockNode() | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L153) |
+| ImGui.DockBuilderCopyWindowSettings(src_name, dst_name) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L158) |
+| ImGui.DockBuilderFinish(node_id) | [imgui_docking_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_docking_gm.cpp#L166) |
 | ImGui.DragFloatN(label, v, v_speed, v_min, v_max, format, flags, count) | [imgui_drag_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_drag_gm.cpp#L94) |
 | ImGui.DragIntN(label, v, v_speed, v_min, v_max, format, flags, count) | [imgui_drag_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_drag_gm.cpp#L237) |
 | ImGui.DrawListAddLine(list, x1, y1, x2, y2, col, thickness) | [imgui_drawlist_gm.cpp](https://github.com/nommiin/ImGui_GM/blob/main/dll/imgui_drawlist_gm.cpp#L37) |

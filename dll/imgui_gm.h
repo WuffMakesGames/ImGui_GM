@@ -32,18 +32,18 @@
 #define WriteLog(...) DebugConsoleOutput("[ImGui_GM] %s\n", __VA_ARGS__)
 
 // Helpers
-static inline ImVec4 GMCOLOR_TO(int col, float alpha) { 
+static __forceinline ImVec4 GMCOLOR_TO(int col, float alpha) {
 	float r = (float)(col & 0xFF) / 0xFF;
 	float g = (float)((col >> 8) & 0xFF) / 0xFF;
 	float b = (float)((col >> 16) & 0xFF) / 0xFF;
 	return ImVec4(r, g, b, alpha);
 }
 
-static inline double GMCOLOR_FROM(ImVec4 col) {
-	int r = col.x * 0xFF;
-	int g = col.y * 0xFF;
-	int b = col.z * 0xFF;
-	int alpha = col.w * 0xFF;
+static __forceinline double GMCOLOR_FROM(ImVec4 col) {
+	int r = (int)(col.x * 0xFF);
+	int g = (int)(col.y * 0xFF);
+	int b = (int)(col.z * 0xFF);
+	int alpha = (int)(col.w * 0xFF);
 	return r | (g << 8) | (b << 16) | (alpha << 24);
 }
 
@@ -53,7 +53,7 @@ extern int g_FontBuffer;
 extern bool g_UpdateFont;
 
 extern RValue g_Copy;
-template<typename T> static inline T* YYGetArray(RValue* arg, int ind, int len) {
+template<typename T> static __forceinline T* YYGetArray(RValue* arg, int ind, int len) {
 	RValue* arr = &arg[ind];
 	T* val = new T[len];
 	for (int i = 0; i < len; i++) {
@@ -62,7 +62,7 @@ template<typename T> static inline T* YYGetArray(RValue* arg, int ind, int len) 
 	}
 	return val;
 }
-template<typename T> static inline void YYSetArray(RValue* arg, T* arr, int len) {
+template<typename T> static __forceinline void YYSetArray(RValue* arg, T* arr, int len) {
 	for (int i = 0; i < len; i++) {
 		g_Copy.kind = VALUE_REAL;
 		g_Copy.val = arr[i];
@@ -78,7 +78,7 @@ enum TextureType : char {
 	TextureType_Font = 1 << 2
 };
 
-static inline ImTextureRef GetTexture(unsigned int id, unsigned int subimg, TextureType type=TextureType_Raw) {
+static __forceinline ImTextureRef GetTexture(unsigned int id, unsigned int subimg, TextureType type=TextureType_Raw) {
 	// Format:
 	// u64: 00000000000000000000000000000000 0000000000000000 0000
 	//      ^ subimg                         ^ id             ^ type

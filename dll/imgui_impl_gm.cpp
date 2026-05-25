@@ -4,7 +4,7 @@
 #include "YYRValue.h"
 
 static char* g_pWrite[128];
-template<typename T> inline void BufferWrite(int buffer, T val, int& offset, bool grow = true) {
+template<typename T> __forceinline void BufferWrite(int buffer, T val, int& offset, bool grow = true) {
 	*(T*)(&g_pWrite) = val;
 	offset = BufferWriteContent(buffer, offset, g_pWrite, sizeof(T), grow);
 }

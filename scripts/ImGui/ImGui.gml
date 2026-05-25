@@ -3516,6 +3516,21 @@ function ImGui() constructor {
 		return __imgui_image(sprite, subimg, color, alpha, width, height, sprite_get_uvs(sprite, subimg));
 	}
 
+	/// @function ImageWithBg(sprite, subimg, bg_color, bg_alpha, color, alpha, width, height)
+	/// @argument {Real} sprite
+	/// @argument {Real} subimg
+	/// @argument {Real} [bg_color=c_white]
+	/// @argument {Real} [bg_alpha=1]
+	/// @argument {Real} [color=c_white]
+	/// @argument {Real} [alpha=1]
+	/// @argument {Real} [width=sprite_get_width⌊sprite⌉]
+	/// @argument {Real} [height=sprite_get_height⌊sprite⌉]
+	/// @context ImGui
+	/// @return {Undefined}
+	static ImageWithBg = function(sprite, subimg, bg_color=c_white, bg_alpha=1, color=c_white, alpha=1, width=sprite_get_width(sprite), height=sprite_get_height(sprite)) {
+		return __imgui_image_with_bg(sprite, subimg, bg_color, bg_alpha, color, alpha, width, height, sprite_get_uvs(sprite, subimg));
+	}
+
 	/// @function ImageButton(str_id, sprite, subimg, color, alpha, bg_color, bg_alpha, width, height)
 	/// @argument {String} str_id
 	/// @argument {Real} sprite

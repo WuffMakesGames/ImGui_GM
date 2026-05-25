@@ -1,7 +1,7 @@
 /**
 *  This script includes snake_case function defintions for ImGui_GM, as an alternative to the namespaced convention
 *  To use, just drop this script into your project with ImGui_GM
-*  Generated at 5/24/2026, 2:22:30 PM
+*  Generated at 5/24/2026, 11:11:59 PM
 */
 
 /// @function imgui_initialize
@@ -3173,6 +3173,20 @@ function imgui_arrow_button(str_id, dir) {
 /// @return {Undefined}
 function imgui_image(sprite, subimg, color=c_white, alpha=1, width=sprite_get_width(sprite), height=sprite_get_height(sprite)) {
 	return __imgui_image(sprite, subimg, color, alpha, width, height, sprite_get_uvs(sprite, subimg));
+}
+
+/// @function imgui_image_with_bg(sprite, subimg, bg_color, bg_alpha, color, alpha, width, height)
+/// @argument {Real} sprite
+/// @argument {Real} subimg
+/// @argument {Real} [bg_color=c_white]
+/// @argument {Real} [bg_alpha=1]
+/// @argument {Real} [color=c_white]
+/// @argument {Real} [alpha=1]
+/// @argument {Real} [width=sprite_get_width⌊sprite⌉]
+/// @argument {Real} [height=sprite_get_height⌊sprite⌉]
+/// @return {Undefined}
+function imgui_image_with_bg(sprite, subimg, bg_color=c_white, bg_alpha=1, color=c_white, alpha=1, width=sprite_get_width(sprite), height=sprite_get_height(sprite)) {
+	return __imgui_image_with_bg(sprite, subimg, bg_color, bg_alpha, color, alpha, width, height, sprite_get_uvs(sprite, subimg));
 }
 
 /// @function imgui_image_button(str_id, sprite, subimg, color, alpha, bg_color, bg_alpha, width, height)

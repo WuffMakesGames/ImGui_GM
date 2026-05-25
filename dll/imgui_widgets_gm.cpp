@@ -64,6 +64,31 @@ GMFUNC(__imgui_image) {
 	delete[]uv;
 }
 
+GMFUNC(__imgui_image_with_bg) {
+	double sprite = YYGetReal(arg, 0);
+	double subimg = YYGetReal(arg, 1);
+	double bg_color = YYGetReal(arg, 2);
+	GMDEFAULT(c_white);
+	float bg_alpha = YYGetReal(arg, 3);
+	GMDEFAULT(1);
+	double color = YYGetReal(arg, 4);
+	GMDEFAULT(c_white);
+	float alpha = YYGetReal(arg, 5);
+	GMDEFAULT(1);
+	double width = YYGetReal(arg, 6);
+	GMDEFAULT(sprite_get_width(#arg0));
+	double height = YYGetReal(arg, 7);
+	GMDEFAULT(sprite_get_height(#arg0));
+	double* uv = YYGetArray<double>(arg, 8, 8);
+	GMHIDDEN();
+	GMPASSTHROUGH(sprite_get_uvs(#arg0, #arg1));
+	GMOVERRIDE(ImageWithBg);
+
+	ImGui::ImageWithBg(GetTexture(sprite, subimg, TextureType_Sprite), ImVec2(width * uv[6], height * uv[7]), ImVec2(uv[0], uv[1]), ImVec2(uv[2], uv[3]), GMCOLOR_TO(bg_color, bg_alpha), GMCOLOR_TO(color, alpha));
+	Result.kind = VALUE_UNDEFINED;
+	delete[]uv;
+}
+
 GMFUNC(__imgui_image_button) {
 	const char* str_id = YYGetString(arg, 0);
 	double sprite = YYGetReal(arg, 1);

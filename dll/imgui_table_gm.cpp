@@ -122,7 +122,7 @@ GMFUNC(__imgui_table_set_bg_color) {
 	double column_n = YYGetReal(arg, 2);
 	GMDEFAULT(-1);
 
-	ImGui::TableSetBgColor(target, (ImU32)(0xFF << 24) | col, column_n);
+	ImGui::TableSetBgColor(target, col, column_n);
 	Result.kind = VALUE_UNDEFINED;
 }
 

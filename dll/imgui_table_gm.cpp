@@ -116,6 +116,7 @@ GMFUNC(__imgui_table_set_column_enabled) {
 	Result.kind = VALUE_UNDEFINED;
 }
 
+// TODO: Add alpha
 GMFUNC(__imgui_table_set_bg_color) {
 	ImGuiTableBgTarget target = YYGetInt64(arg, 0);
 	int col = YYGetReal(arg, 1);

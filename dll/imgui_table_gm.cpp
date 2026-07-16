@@ -120,10 +120,12 @@ GMFUNC(__imgui_table_set_column_enabled) {
 GMFUNC(__imgui_table_set_bg_color) {
 	ImGuiTableBgTarget target = YYGetInt64(arg, 0);
 	int col = YYGetReal(arg, 1);
-	double column_n = YYGetReal(arg, 2);
+	float alpha = YYGetReal(arg, 2);
+	GMDEFAULT(1);
+	double column_n = YYGetReal(arg, 3);
 	GMDEFAULT(-1);
 
-	ImGui::TableSetBgColor(target, col, column_n);
+	ImGui::TableSetBgColor(target, col | (int(alpha * 255.0) << 24), column_n);
 	Result.kind = VALUE_UNDEFINED;
 }
 

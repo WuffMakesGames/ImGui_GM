@@ -222,11 +222,11 @@ if (main_open) {
 		
 			input_int = ImGui.InputInt("ImGui::InputInt", input_int, 1, 5);
 			input_float = ImGui.InputFloat("ImGui::InputFloat", input_float, 0.1, 0.5);
-			ImGui.EndChild();
+		ImGui.EndChild();
 		
-			ImGui.SameLine();
+		ImGui.SameLine();
 		
-			ImGui.BeginChild("Inner_Colors", 0, height, true);
+		ImGui.BeginChild("Inner_Colors", 0, height, true);
 			ImGui.Text("Colors");
 			ImGui.Separator();
 		
@@ -239,7 +239,7 @@ if (main_open) {
 			ImGui.ColorEdit4("ImGui::ColorEdit4", col6);
 		ImGui.EndChild();
 		
-		ImGui.SameLine();
+		//ImGui.SameLine();
 		
 		ImGui.BeginChild("Inner_Table", width / 2, height, true);
 			ImGui.Text("Tables");
@@ -253,8 +253,9 @@ if (main_open) {
 				for(var i = 0; i < 5; i++) {
 					ImGui.TableNextRow();
 					for(var j = 0; j < 3; j++) {
+						var alpha = sin(current_time/1000 + i + j)*0.25 + 0.75
 						ImGui.TableSetColumnIndex(j);
-						ImGui.TableSetBgColor(ImGuiTableBgTarget.CellBg, make_color_hsv(255 * ((i + j) / 8), 128, 255), j);
+						ImGui.TableSetBgColor(ImGuiTableBgTarget.CellBg, make_color_hsv(255 * ((i + j) / 8), 128, 255), alpha, j);
 						ImGui.Text("Hello " + string(i + j));
 					}
 				}

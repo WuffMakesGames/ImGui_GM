@@ -1,7 +1,7 @@
 /**
 *  This script includes snake_case function defintions for ImGui_GM, as an alternative to the namespaced convention
 *  To use, just drop this script into your project with ImGui_GM
-*  Generated at 7/14/2026, 1:40:09 PM
+*  Generated at 7/16/2026, 8:16:35 AM
 */
 
 /// @function imgui_initialize
@@ -2911,13 +2911,14 @@ function imgui_table_set_column_enabled(column_n, v) {
 	return __imgui_table_set_column_enabled(column_n, v);
 }
 
-/// @function imgui_table_set_bg_color(target, col, column_n)
+/// @function imgui_table_set_bg_color(target, col, alpha, column_n)
 /// @argument {Real} target
 /// @argument {Real} col
+/// @argument {Real} [alpha=1]
 /// @argument {Real} [column_n=-1]
 /// @return {Undefined}
-function imgui_table_set_bg_color(target, col, column_n=-1) {
-	return __imgui_table_set_bg_color(target, col, column_n);
+function imgui_table_set_bg_color(target, col, alpha=1, column_n=-1) {
+	return __imgui_table_set_bg_color(target, col, alpha, column_n);
 }
 
 /// @function imgui_columns(count, _id, border)

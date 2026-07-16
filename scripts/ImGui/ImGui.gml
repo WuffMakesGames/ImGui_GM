@@ -3214,14 +3214,15 @@ function ImGui() constructor {
 		return __imgui_table_set_column_enabled(column_n, v);
 	}
 
-	/// @function TableSetBgColor(target, col, column_n)
+	/// @function TableSetBgColor(target, col, alpha, column_n)
 	/// @argument {Real} target
 	/// @argument {Real} col
+	/// @argument {Real} [alpha=1]
 	/// @argument {Real} [column_n=-1]
 	/// @context ImGui
 	/// @return {Undefined}
-	static TableSetBgColor = function(target, col, column_n=-1) {
-		return __imgui_table_set_bg_color(target, col, column_n);
+	static TableSetBgColor = function(target, col, alpha=1, column_n=-1) {
+		return __imgui_table_set_bg_color(target, col, alpha, column_n);
 	}
 
 	/// @function Columns(count, _id, border)

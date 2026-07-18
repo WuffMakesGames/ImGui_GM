@@ -1,7 +1,7 @@
 /**
 *  This script includes snake_case function defintions for ImGui_GM, as an alternative to the namespaced convention
 *  To use, just drop this script into your project with ImGui_GM
-*  Generated at 7/16/2026, 8:16:35 AM
+*  Generated at 7/18/2026, 6:05:12 PM
 */
 
 /// @function imgui_initialize
@@ -3278,6 +3278,17 @@ function imgui_progressbar(_frac, width=0, height=0, overlay="") {
 /// @return {Undefined}
 function imgui_bullet() {
 	return __imgui_bullet();
+}
+
+/// @function imgui_begin_viewport_sidebar(name, viewport, dir, size, window_flags)
+/// @argument {String} name
+/// @argument {Real} viewport
+/// @argument {Real} dir
+/// @argument {Real} size
+/// @argument {Enum.ImGuiWindowFlags} [window_flags=ImGuiWindowFlags.None]
+/// @return {Bool}
+function imgui_begin_viewport_sidebar(name, viewport, dir, size, window_flags=ImGuiWindowFlags.None) {
+	return __imgui_begin_viewport_sidebar(name, viewport, dir, size, window_flags);
 }
 
 /// @function imgui_begin(name, open, flags, mask)

@@ -3629,6 +3629,18 @@ function ImGui() constructor {
 		return __imgui_bullet();
 	}
 
+	/// @function BeginViewportSideBar(name, viewport, dir, size, window_flags)
+	/// @argument {String} name
+	/// @argument {Real} viewport
+	/// @argument {Real} dir
+	/// @argument {Real} size
+	/// @argument {Enum.ImGuiWindowFlags} [window_flags=ImGuiWindowFlags.None]
+	/// @context ImGui
+	/// @return {Bool}
+	static BeginViewportSideBar = function(name, viewport, dir, size, window_flags=ImGuiWindowFlags.None) {
+		return __imgui_begin_viewport_sidebar(name, viewport, dir, size, window_flags);
+	}
+
 	/// @function Begin(name, open, flags, mask)
 	/// @argument {String} name
 	/// @argument {Bool} [open=undefined]

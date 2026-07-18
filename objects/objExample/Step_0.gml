@@ -52,6 +52,39 @@ if (ImGui.BeginMenu("Windows")) {
 }
 ImGui.EndMainMenuBar();
 
+// Toolbar
+var sidebar_flags = ImGuiWindowFlags.NoScrollbar | ImGuiWindowFlags.NoScrollWithMouse | ImGuiWindowFlags.NoSavedSettings | ImGuiWindowFlags.NoNavFocus | ImGuiWindowFlags.NoBringToFrontOnFocus
+ImGui.PushStyleVar(ImGuiStyleVar.WindowPadding, 4, 4)
+if (ImGui.BeginViewportSideBar("Toolbar", 0, ImGuiDir.Up, 28, sidebar_flags)) {
+	ImGui.Button("Home")
+	
+	ImGui.SameLine(0, 24)
+	ImGui.Button("New File")
+	ImGui.SameLine()
+	ImGui.Button("Open File")
+	ImGui.SameLine()
+	ImGui.Button("Save File")
+	
+	ImGui.SameLine(0, 24)
+	ImGui.Button("Debug")
+	ImGui.SameLine()
+	ImGui.Button("Play")
+	ImGui.SameLine()
+	ImGui.Button("Stop")
+	ImGui.SameLine()
+	ImGui.Button("Cleanup")
+}
+ImGui.PopStyleVar()
+ImGui.End()
+
+// Statusbar
+if (ImGui.BeginViewportSideBar("Statusbar", 0, ImGuiDir.Down, 28, sidebar_flags)) {
+	ImGui.Text($"({mouse_x}, {mouse_y})")
+	ImGui.SameLine()
+	ImGui.Text($"This is a statusbar")
+}
+ImGui.End()
+
 // Adapted from https://gist.github.com/AidanSun05/953f1048ffe5699800d2c92b88c36d9f
 if (!init) {
 	var node_id = ImGui.GetID("Primary");
